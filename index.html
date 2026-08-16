@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio J.F.B.</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/MEJORADO.png"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="header-brand">
+        <div class="header-logo">
+            <img src="img/MEJORADO.png"
+                 alt="Logo de la Unidad Educativa">
+        </div>
+        <div class="header-info">
+            <p>Unidad Educativa</p>
+            <h1>J.F.B.</h1>            
+        </div>
+    </div>
+    <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#comunicados">Comunicados</a>
+        <a href="#destacados">Estudiantes destacados</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#fotos">Galería de fotos</a>
+        <a href="#videos">Galería de videos</a>
+        <a href="#comentarios">Comentarios</a>
+        <a href="https://ce175170-bit.github.io/3-ESTUDIANTES/">Zona estudiantes</a>
+        <a href="https://ce175170-bit.github.io/profes/">Zona profesores</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+
+<!-- =============== BIENVENIDOS =============== -->
+<section class="inicio" id="inicio">
+    <div class="contenedor">
+        <img src="img/MEJORADO.png" class="porta">
+    </div>
+    <div class="inicio-contenido">
+        <span class="inicio-etiqueta">
+            UNIDAD EDUCATIVA J.F.B.
+        </span>
+        <h1>
+            Bienvenidos a nuestra
+            <strong>institución educativa</strong>
+        </h1>
+        <p>
+            Un espacio para aprender, crecer y construir
+            juntos un mejor futuro.
+        </p>
+        <div class="inicio-botones">
+            <a href="#comunicados" class="btn-inicio">
+                Ver comunicados
+            </a>
+            <a href="#fotos" class="btn-inicio-secundario">
+                Explorar galería
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============== MISIÓN Y VISIÓN ========== -->
+<section class="mision-vision" id="mision-vision">
+    <div class="section-title">
+        <span>NUESTRA INSTITUCIÓN</span>
+        <h2>Misión y Visión</h2>
+        <p>
+            Conoce los principios que orientan
+            nuestra institución educativa.
+        </p>
+    </div>
+    <div class="mv-contenedor">
+        <!-- MISIÓN -->
+        <div class="mv-item">
+            <button class="mv-boton">
+                <div class="mv-titulo">
+                    <div class="mv-icono">🎯</div>
+                    <div>
+                        <small>01</small>
+                        <strong>Misión</strong>
+                    </div>
+                </div>
+                <span class="mv-flecha">+</span>
+            </button>
+            <div class="mv-contenido">
+                <p>
+                    La misión del Colegio Juan Francisco 
+                    Bohórquez es formar integralmente a niñas, niños y jóvenes 
+                    con capacidades y destrezas, articuladas a las necesidades 
+                    educativas de la sociedad en complementariedad con la práctica 
+                    de valores, ciencia, tecnología, arte y principios éticos.
+                </p>
+            </div>
+        </div>
+        <!-- VISIÓN -->
+        <div class="mv-item">
+            <button class="mv-boton">
+                <div class="mv-titulo">
+                    <div class="mv-icono">👁</div>
+                    <div>
+                        <small>02</small>
+                        <strong>Visión</strong>
+                    </div>
+                </div>
+                <span class="mv-flecha">+</span>
+            </button>
+            <div class="mv-contenido">
+                <p>
+                    Ser formadores y promotores de una 
+                    convivencia con la práctica de valores y principios éticos y 
+                    morales, mediante una educación integral, oportuna y pertinente 
+                    a las expectativas y necesidades, contribuyendo al desarrollo 
+                    integral de nuestra nación.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============== COMUNICADOS ================= -->
+<section>
+    <section class="section comunicados-section" id="comunicados">
+        <div class="section-title">
+            <span>INFORMACIÓN INSTITUCIONAL</span>
+            <h2>Comunicados</h2>
+            <p>
+                Consulta los comunicados oficiales y mantente
+                informado sobre las actividades de nuestra institución.
+            </p>
+        </div>
+        <div class="comunicados-container">
+
+            <!-- COMUNICADO 1 -->
+            <article class="comunicado">
+                <div class="comunicado-header">
+                    <div>
+                        <span class="comunicado-label">COMUNICADO</span>
+                        <h3>Entrevistas</h3>
+                    </div>
+                    <span class="comunicado-fecha">
+                        12 de agosto de 2026
+                    </span>
+                </div>
+                <div class="comunicado-imagen">
+                    <img src="Comunicados/entrevistas.png"
+                        alt="Comunicado institucional">
+                </div>
+                <div class="comunicado-footer">
+                    <p>
+                        Se comunica a los padres de familia asistir a las
+                        entrevistas segun el cronograma. 
+                    </p>
+                    <button
+                        class="ver-comunicado"
+                        onclick="abrirComunicado('Comunicados/entrevistas.png')">
+                        <i class="fa-solid fa-expand"></i>
+                        Ver comunicado completo
+                    </button>
+                </div>
+            </article>
+
+            <!-- COMUNICADO 2 -->
+            <article class="comunicado">
+                <div class="comunicado-header">
+                    <div>
+                        <span class="comunicado-label">COMUNICADO</span>
+                        <h3>Rol de partidos basquet</h3>
+                    </div>
+                    <span class="comunicado-fecha">
+                        10 de agosto de 2026
+                    </span>
+                </div>
+                <div class="comunicado-imagen">
+                    <img src="Comunicados/rol.png"
+                        alt="Aviso institucional">
+                </div>
+                <div class="comunicado-footer">
+                    <p>
+                        Los partidos se llevaran a cabo en el
+                        la cancha del colegio desde horas 14:00
+                    </p>
+                    <button
+                        class="ver-comunicado"
+                        onclick="abrirComunicado('Comunicados/rol.png')">
+                        <i class="fa-solid fa-expand"></i>
+                        Ver comunicado completo
+                    </button>
+                </div>
+            </article>
+
+            <!-- COMUNICADO 3 -->
+            <article class="comunicado">
+                <div class="comunicado-header">
+                    <div>
+                        <span class="comunicado-label">IMPORTANTE</span>
+                        <h3>Aviso para estudiantes</h3>
+                    </div>
+                    <span class="comunicado-fecha">
+                        15 de agosto de 2026
+                    </span>
+                </div>
+                <div class="comunicado-imagen">
+                    <img src="Comunicados/comunicado1.png"
+                        alt="Comunicado para estudiantes">
+                </div>
+                <div class="comunicado-footer">
+                    <p>
+                        Información dirigida a los estudiantes.
+                    </p>
+                    <button
+                        class="ver-comunicado"
+                        onclick="abrirComunicado('Comunicados/comunicado1.png')">
+                        <i class="fa-solid fa-expand"></i>
+                        Ver comunicado completo
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- ================= VISOR DEL COMUNICADO ================= -->
+    <div class="modal-comunicado" id="modalComunicado">
+        <button
+            class="cerrar-comunicado"
+            onclick="cerrarComunicado()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img
+            id="imagenComunicado"
+            src=""
+            alt="Comunicado completo">
+    </div>
+</section>
+
+<!-- ================ DESTACADOS ================= -->
+<section class="section section-light" id="destacados">
+    <div class="section-title">
+        <span>RECONOCIMIENTO</span>
+        <h2>Estudiantes destacados</h2>
+        <p>
+            Reconocemos el esfuerzo, dedicación y compromiso
+            de nuestros estudiantes.
+        </p>
+    </div>
+    <div class="students">
+        <article class="student-card">
+            <div class="student-photo">
+                <img src="img/mejores.png" alt="Estudiantes destacados">                
+            </div>
+            <div class="student-info">
+                <span>ESTUDIANTES DESTACADO</span>
+                <h3>1° Dahiana Michelle Checa Lupa <br>
+                    2° Mibia Yubiza Llanos Flores <br>
+                    3° Alex Sebastian Menacho Gerónimo</h3>
+                <p>
+                    Hoy reconocemos a nuestros tres estudiantes destacados, 
+                    quienes con esfuerzo, responsabilidad, disciplina y dedicación 
+                    han demostrado que la perseverancia es el camino hacia el éxito. <br>
+                    🥇 <strong>Primer lugar: (1° B)</strong> Por su excelente desempeño académico y compromiso constante. <br>
+                    🥈 <strong>Segundo lugar: (3° A)</strong> Por su dedicación, responsabilidad y espíritu de superación. <br>
+                    🥉 <strong>Tercer lugar: (2° B)</strong> Por su esfuerzo, constancia y actitud positiva ante cada desafío. <br>
+                    ¡Felicitaciones a los tres! <br>
+                    Su logro es motivo de orgullo para sus familias, docentes y toda la comunidad 
+                    educativa. Que este reconocimiento sea una motivación para continuar 
+                    aprendiendo, creciendo y alcanzando nuevas metas. <br>
+                    “El éxito no es llegar primero, sino nunca dejar de avanzar.”
+                </p>
+                <div class="achievement">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Excelencia académica</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ================ NOTICIAS ================= -->
+<section class="section" id="noticias">
+    <div class="section-title">
+        <span>ACTUALIDAD</span>
+        <h2>Noticias</h2>
+        <p>
+            Conoce las principales actividades y acontecimientos
+            de nuestra comunidad educativa.
+        </p>
+    </div>
+
+            <!--  Noticia 1 -->
+    <div class="news-grid">
+        <article class="news-card">
+            <img src="Noticias/noti1.jpg" alt="Noticia">
+            <div class="news-content">
+                <small>12 Agosto 2026</small>
+                <h3>
+                    Ministerio de Educación anuncia que estudiantes 
+                    deberán cumplir 4 años hasta 31 de marzo para ingresar a 
+                    la educación inicial en 2027
+                </h3>
+                <p>
+                    El Ministerio de Educación anunció que, para la gestión 
+                    educativa 2027, las inscripciones para el primer año de 
+                    escolaridad del nivel Inicial en Familia Comunitaria se 
+                    realizarán considerando a los niños que tengan cuatro años cumplidos hasta...
+                </p>
+                <a href="https://www.minedu.gob.bo/index.php?option=com_content&view=article&id=8435&catid=182&Itemid=854">
+                    Leer más →
+                </a>
+            </div>
+        </article>
+
+                <!--  Noticia 2 -->
+        <article class="news-card">
+            <img src="Noticias/noti2.webp" alt="Noticia">
+            <div class="news-content">
+                <small>12 Agosto 2026</small>
+                <h3>
+                    Educación destaca que diploma de bachiller digital eliminará 
+                    trámites y reducirá costos
+                </h3>
+                <p>
+                    El director departamental de Educación de Santa Cruz, Nelson Neri 
+                    Alcócer, destacó la implementación del diploma de bachiller digital, 
+                    una medida que, según afirmó, modernizará el sistema educativo al eliminar 
+                    trámites presenciales, reducir costos y agilizar la entrega del documento a los estudiantes.
+                </p>
+                <a href="https://www.reduno.com.bo/noticias/cerca-de-200-000-bachilleres-recibiran-por-primera-vez-un-titulo-digital-y-gratuito-en-bolivia-20267268193">
+                    Leer más →
+                </a>
+            </div>
+        </article>
+
+                <!--  Noticia 3 -->
+        <article class="news-card">
+            <img src="Noticias/noti3.jpg" alt="Noticia">
+            <div class="news-content">
+                <small>12 Agosto 2026</small>
+                <h3>
+                    Reportan que nevadas alcanzaron hasta 30 cm de espesor y afectan al ganado
+                </h3>
+                <p>
+                    El responsable del Sistema de Alerta Temprana (SAT) de Potosí, Javier Gonzales, 
+                    informó este jueves que las nevadas en el sudeste potosino alcanzaron un espesor 
+                    de hasta 30 cm, afectando la alimentación y a las crías de ganado en la región.
+                </p>
+                <a href="https://elpotosi.net/local/20260814_reportan-que-nevadas-alcanzaron-hasta-30-cm-de-espesor-y-afectan-al-ganado.html">
+                    Leer más →
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ================= GALERÍA DE FOTOS ================= -->
+<section class="media-section" id="fotos">
+    <div class="section-title">
+        <span>NUESTRA HISTORIA</span>
+        <h2>Galería de fotos</h2>
+        <p>
+            Conoce los momentos más importantes y especiales
+            de nuestra comunidad educativa.
+        </p>
+    </div>
+    <div class="photo-gallery">
+        <div class="photo-main">
+            <img
+                id="mainPhoto"
+                src="Galeria fotos/ago.jpg"
+                alt="Actividad educativa">
+            <div class="photo-overlay">
+                <div>
+                    <span id="photoCategory">
+                        ANIVERSARIO DE BOLIVIA
+                    </span>
+                    <h3 id="photoTitle">
+                        Desfile, 6 de agosto de 2026
+                    </h3>
+                    <p id="photoDescription">
+                        <strong>Actividades y experiencias compartidas
+                        por nuestra comunidad educativa.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="photo-thumbnails">
+            <button
+                class="photo-thumb active"
+                data-image="Galeria fotos/ago1.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago1.jpg" alt="Foto 1">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago2.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago2.jpg" alt="Foto 2">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago3.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago3.jpg" alt="Foto 3">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago4.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago4.jpg" alt="Foto 4">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago5.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago5.jpg" alt="Foto 5">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago6.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago6.jpg" alt="Foto 5">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago7.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago7.jpg" alt="Foto 5">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago8.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago8.jpg" alt="Foto 5">
+            </button>
+
+            <button
+                class="photo-thumb"
+                data-image="Galeria fotos/ago9.jpg"
+                data-title=""
+                data-category=""
+                data-description="">
+                <img src="Galeria fotos/ago9.jpg" alt="Foto 5">
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= GALERÍA DE VIDEOS ================= -->
+<section class="video-gallery-section" id="videos">
+    <div class="section-title light">
+        <span>EXPERIENCIAS</span>
+        <h2>Galería de videos</h2>
+        <p>
+            Descubre mediante nuestros videos las actividades,
+            eventos y experiencias de nuestra institución.
+        </p>
+    </div>
+    <div class="video-gallery">
+        <div class="video-main">
+            <video
+                id="mainVideo"
+                controls
+                poster="img/Portada Videos.png">
+                <source
+                    src="videos/pueba.mp4"
+                    type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+        <div class="video-information">
+            <span id="videoCategory">
+                ACTIVIDAD INSTITUCIONAL
+            </span>
+
+            <h3 id="videoTitle">
+                Actividades de nuestra institución
+            </h3>
+
+            <p id="videoDescription">
+                Conoce algunos de los momentos más importantes
+                de nuestra comunidad educativa.
+            </p>
+        </div>
+        <div class="video-thumbnails">
+
+                <!-- Video 1 -->
+            <button
+                class="video-thumb active"
+                data-video="Galeria videos/desfile.mp4"
+                data-poster=""
+                data-title="6 de agosto"
+                data-category=""
+                data-description="">
+                <img
+                    src="img/Portada Videos.png"
+                    alt="Video 1">
+                <span>
+                    <i class="fa-solid fa-play"></i>
+                </span>
+            </button>
+
+                <!-- Video 2 -->
+            <button
+                class="video-thumb"
+                data-video="Galeria videos/Bulling.mp4"
+                data-poster=""
+                data-title="Evitemos el Bulling"
+                data-category=""
+                data-description="">
+                <img
+                    src="img/bulling.png"
+                    alt="Video 2">
+                <span>
+                    <i class="fa-solid fa-play"></i>
+                </span>
+            </button>
+
+                <!-- Video 3 -->
+            <button
+                class="video-thumb"
+                data-video="Galeria videos/celular.mp4"
+                data-poster=""
+                data-title="Evitemos el uso excesivo del celular"
+                data-category=""
+                data-description="">
+                <img
+                    src="img/celular.png"
+                    alt="Video 3">
+                <span>
+                    <i class="fa-solid fa-play"></i>
+                </span>
+            </button>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ================= COMENTARIOS ================= -->
+<section class="comentarios" id="comentarios">
+    <div class="section-title">
+        <span>OPINIONES</span>
+        <h2>Comentarios</h2>
+    </div>
+    <div class="comentario-carrusel">
+        <button class="flecha-comentario izquierda" id="anterior">
+            &#10094;
+        </button>
+        <div class="comentario-contenedor">
+
+            <!-- COMENTARIO 1 -->
+            <div class="comentario-item">
+                <img src="img/MEJORADO.png" alt="Persona">
+                <div>
+                    <h3>Limber Mamani Estrada</h3>
+                    <small>Presidente 5° B <br>Est. Col. J.F.B.</small>
+                    <p>
+                    "Seguir mejorando para que no se 
+                    vea que solo un colegio depende de lo estético, sino de 
+                    su potencial en sus estudiantes"
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMENTARIO 2 -->
+            <div class="comentario-item">
+                <img src="img/MEJORADO.png" alt="Persona">
+                <div>
+                    <h3>Milton Mamani Umiri</h3>
+                    <small>Presidente 3° B <br>Est. Col. J.F.B.</small>
+                    <p>
+                    "Gracias por brindarnos educacion 
+                    y valores cada día, me siento orgulloso 
+                    de ser parte de este Colegio"
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMENTARIO 3 -->
+            <div class="comentario-item">
+                <img src="img/checa.png" alt="Persona">
+                <div>
+                    <h3>Dahiana Michelle Checa Lupa</h3>
+                    <small>Presidenta 1° B <br>Est. Col. J.F.B.</small>
+                    <p>
+                    "Gracias, colegio por enseñarme, ayudarme 
+                    a crecer y regalarme recuerdos que siempre 
+                    llevare en mi corazón"
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMENTARIO 4 -->
+            <div class="comentario-item">
+                <img src="img/MEJORADO.png" alt="Persona">
+                <div>
+                    <h3>Bertha Mosquera Perez</h3>
+                    <small>Presidenta 4° C <br>Est. Col. J.F.B.</small>
+                    <p>
+                    "Gracias a este colegio por cada maestro, 
+                    cada enseñanza y cada oportunidad. Es un honor llevar el nombre 
+                    de esta institucion con orgullo"
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMENTARIO 5 -->
+            <div class="comentario-item">
+                <img src="img/Abigail.png" alt="Persona">
+                <div>
+                    <h3>Abigail Bobarin Uyuquipa</h3>
+                    <small>Presidenta 2° B <br>Est. Col. J.F.B.</small>
+                    <p>
+                   "Estudiar en el Bohórquez es 
+                    construir el mañana con disciplina y sueños"
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMENTARIO 6 -->
+            <div class="comentario-item">
+                <img src="img/MEJORADO.png" alt="Persona">
+                <div>
+                    <h3>Maya Alexa Caba Rodriguez</h3>
+                    <small>Presidenta 2° A <br>Est. Col. J.F.B.</small>
+                    <p>
+                    "Gracias por ser un 
+                    lugar donde aprendemos, crecemos y construimos nuestro 
+                    futuro. Les deseo muchos existos y que sigan inspirando a 
+                    mas generaciones de estudiantes"
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMENTARIO 7 -->
+            <div class="comentario-item">
+                <img src="img/MEJORADO.png" alt="Persona">
+                <div>
+                    <h3>Angel Sebastian Antezana Mamani</h3>
+                    <small>Presidente 1° C <br>Est. Col. J.F.B.</small>
+                    <p>
+                   "Equivocarse en clases no es un 
+                    fracaso, es la prueba mas clara de que tienes la valentia 
+                    de intentar algo nuevo."
+                    </p>
+                </div>
+            </div>    
+
+        </div>
+        <button class="flecha-comentario derecha" id="siguiente">
+            &#10095;
+        </button>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo footer-logo">                
+                <div>
+                    <h2>J.F.B.</h2>
+                    <span>Unidad Educativa</span>
+                </div>
+            </div>
+            <p>
+                Formando estudiantes con valores, conocimientos
+                y visión de futuro.
+            </p>
+            <div class="social">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Enlaces</h3>
+            <a href="#inicio">Inicio</a>
+            <a href="#comunicados">Comunicados</a>
+            <a href="#noticias">Noticias</a>
+            <a href="#fotos">Galería</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Información</h3>
+            <a href="#destacados">Estudiantes</a>
+            <a href="#videos">Videos</a>
+            <a href="#comentarios">Comentarios</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Betanzos - Potosí - Bolivia
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                69621569
+            </p>
+            <p>
+                <i class="fa-solid fa-house"></i>
+                Av. Hermanos Pereira
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Unidad Educativa J.F.B. | JhonatanDM & LauraCC
+        </p>
+        <p>
+            Proyecto Educativo 2026
+        </p>
+    </div>
+</footer>
+
+<!-- =============== BOTÓN ARRIBA ===============-->
+<button id="topBtn" class="top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
