@@ -1354,12 +1354,12 @@ select {
         font-size: 8px;
     }
     .porta {
-    position:relative;
-    margin-top: -18%;   
-    left: 40px;
-    right: 50px;
-    width: 60%;
-    }
+    position: relative;
+    margin-top: -18%;
+    left: 38%;
+    transform: translateX(-50%);
+    width: 65%;
+}
     .inicio-contenido{
         margin-top: 300px;
     }
@@ -1758,3 +1758,88 @@ select {
         transform: translateY(0);
     }
 }
+
+
+
+
+/* =====================================================
+   COMENTARIOS DESLIZABLES EN CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Ocultar flechas en celular */
+    .flecha-comentario {
+        display: none;
+    }
+
+    /* El carrusel ocupa todo el ancho */
+    .comentario-carrusel {
+        width: 100%;
+        margin: 30px auto;
+        display: block;
+    }
+
+    /* Área deslizable */
+    .comentario-contenedor {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        display: flex;
+        gap: 15px;
+
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        scrollbar-width: none;
+
+        /* Permite deslizar con el dedo */
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+    }
+
+    /* Ocultar barra de desplazamiento */
+    .comentario-contenedor::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Cada comentario */
+    .comentario-item {
+        display: flex;
+
+        min-width: 100%;
+        width: 100%;
+
+        min-height: 160px;
+        padding: 20px;
+
+        flex-shrink: 0;
+
+        scroll-snap-align: start;
+    }
+
+    /* Imagen */
+    .comentario-item img {
+        width: 58px;
+        height: 58px;
+        flex-shrink: 0;
+    }
+
+    /* Nombre */
+    .comentario-item h3 {
+        font-size: 14px;
+    }
+
+    /* Cargo */
+    .comentario-item small {
+        font-size: 10px;
+    }
+
+    /* Comentario */
+    .comentario-item p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
+
