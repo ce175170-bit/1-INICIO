@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="img/MEJORADO.png"> 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="script.js">
+    
 </head>
 
 <body>
@@ -525,27 +525,44 @@
 
 <!-- ================= GALERÍA DE VIDEOS ================= -->
 <section class="video-gallery-section" id="videos">
+
     <div class="section-title light">
         <span>EXPERIENCIAS</span>
+
         <h2>Galería de videos</h2>
+
         <p>
             Descubre mediante nuestros videos las actividades,
             eventos y experiencias de nuestra institución.
         </p>
     </div>
+
+
     <div class="video-gallery">
-        <div class="video-main">
+
+        <!-- ================= VIDEO PRINCIPAL ================= -->
+        <div class="video-main" id="videoMain">
+
+            <!-- MP4 PRINCIPAL -->
             <video
                 id="mainVideo"
                 controls
+                playsinline
                 poster="img/Portada Videos.png">
+
                 <source
                     src="videos/pueba.mp4"
                     type="video/mp4">
+
                 Tu navegador no soporta videos.
             </video>
+
         </div>
+
+
+        <!-- ================= INFORMACIÓN ================= -->
         <div class="video-information">
+
             <span id="videoCategory">
                 ACTIVIDAD INSTITUCIONAL
             </span>
@@ -558,44 +575,85 @@
                 Conoce algunos de los momentos más importantes
                 de nuestra comunidad educativa.
             </p>
+
         </div>
+
+
+        <!-- ================= MINIATURAS ================= -->
         <div class="video-thumbnails">
-                <!-- Video 2 -->
+
+
+            <!-- ================= VIDEO MP4 ================= -->
+
             <button
                 class="video-thumb"
+                data-type="mp4"
                 data-video="Galeria videos/Bulling.mp4"
                 data-poster=""
-                data-title="Evitemos el Bulling"
-                data-category=""
-                data-description="">
+                data-title="Evitemos el Bullying"
+                data-category="CONVIVENCIA ESCOLAR"
+                data-description="Reflexionemos sobre la importancia del respeto y la convivencia entre todos los miembros de nuestra comunidad educativa.">
+
                 <img
                     src="img/bulling.png"
-                    alt="Video 2">
+                    alt="Video sobre bullying">
+
                 <span>
                     <i class="fa-solid fa-play"></i>
                 </span>
+
             </button>
 
-                <!-- Video 3 -->
+
+            <!-- ================= VIDEO MP4 ================= -->
+
             <button
                 class="video-thumb"
+                data-type="mp4"
                 data-video="Galeria videos/celular.mp4"
                 data-poster=""
                 data-title="Evitemos el uso excesivo del celular"
-                data-category=""
-                data-description="">
+                data-category="EDUCACIÓN"
+                data-description="Reflexionemos sobre el uso responsable del celular y la importancia de mantener la atención durante nuestras actividades educativas.">
+
                 <img
                     src="img/celular.png"
-                    alt="Video 3">
+                    alt="Video sobre uso del celular">
+
                 <span>
                     <i class="fa-solid fa-play"></i>
                 </span>
+
             </button>
 
+
+            <!-- ================= VIDEO YOUTUBE ================= -->
+
+            <button
+                class="video-thumb"
+                data-type="youtube"
+                data-video="IqbOoPuduTI"
+                data-title="Video de nuestra institución"
+                data-category="ACTIVIDAD INSTITUCIONAL"
+                data-description="Disfruta de este video de YouTube relacionado con las actividades de nuestra institución.">
+
+                <img
+                    src="img/autolesion.png"
+                    alt="Video de YouTube">
+
+                <span>
+                    <i class="fa-solid fa-play"></i>
+                </span>
+
+            </button>
+
+
         </div>
+
     </div>
 
 </section>
+
 
 <!-- ================= COMENTARIOS ================= -->
 <section class="comentarios" id="comentarios">
