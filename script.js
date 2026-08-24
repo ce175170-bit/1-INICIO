@@ -327,34 +327,44 @@ if (
 /* =====================================================
    VISOR DE COMUNICADOS
 ===================================================== */
+
 const modalComunicado =
     document.getElementById(
         "modalComunicado"
     );
+
 const imagenComunicado =
     document.getElementById(
         "imagenComunicado"
     );
 
+
 /* =====================================================
    ABRIR COMUNICADO
 ===================================================== */
+
 function abrirComunicado(imagen) {
+
     if (
         !modalComunicado ||
         !imagenComunicado
     ) return;
+
     imagenComunicado.src = imagen;
+
     modalComunicado.classList.add(
         "activo"
     );
+
     document.body.style.overflow =
         "hidden";
 }
 
+
 /* =====================================================
    CERRAR COMUNICADO
 ===================================================== */
+
 function cerrarComunicado() {
 
     if (
@@ -362,21 +372,31 @@ function cerrarComunicado() {
         !imagenComunicado
     ) return;
 
-
     modalComunicado.classList.remove(
         "activo"
     );
 
-
     document.body.style.overflow = "";
 
     imagenComunicado.src = "";
-
 }
+
+
+/* =====================================================
+   HACER LAS FUNCIONES DISPONIBLES PARA EL HTML
+===================================================== */
+
+window.abrirComunicado =
+    abrirComunicado;
+
+window.cerrarComunicado =
+    cerrarComunicado;
+
 
 /* =====================================================
    CERRAR AL HACER CLIC FUERA
 ===================================================== */
+
 if (modalComunicado) {
 
     modalComunicado.addEventListener(
@@ -397,9 +417,11 @@ if (modalComunicado) {
 
 }
 
+
 /* =====================================================
    CERRAR CON ESC
 ===================================================== */
+
 document.addEventListener(
     "keydown",
     event => {
