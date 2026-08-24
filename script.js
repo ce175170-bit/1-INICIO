@@ -1,9 +1,6 @@
 /* =====================================================
-   PÁGINA WEB EDUCATIVA
-   JAVASCRIPT PRINCIPAL
-   VERDE + NEGRO + BLANCO
+   PÁGINA WEB EDUCATIVA   
 ===================================================== */
-
 
 /* =====================================================
    MENÚ PARA CELULAR
@@ -11,7 +8,6 @@
 
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
-
 if (menuBtn && nav) {
 
     menuBtn.addEventListener("click", () => {
@@ -35,11 +31,9 @@ if (menuBtn && nav) {
 
 }
 
-
 /* =====================================================
    CERRAR MENÚ AL TOCAR FUERA
 ===================================================== */
-
 document.addEventListener("click", event => {
 
     if (!menuBtn || !nav) return;
@@ -61,11 +55,9 @@ document.addEventListener("click", event => {
 
 });
 
-
 /* =====================================================
    CARRUSEL CON MOUSE Y DEDO
 ===================================================== */
-
 function activarCarrusel(slider) {
 
     if (!slider) return;
@@ -210,34 +202,27 @@ function activarCarrusel(slider) {
 
 }
 
-
 /* =====================================================
    ACTIVAR CARRUSEL DE FOTOS
 ===================================================== */
-
 const photoTrack =
     document.getElementById("photoTrack");
-
 if (photoTrack) {
 
     activarCarrusel(photoTrack);
 
 }
 
-
 /* =====================================================
    ACTIVAR CARRUSEL DE VIDEOS
 ===================================================== */
-
 const videoTrack =
     document.getElementById("videoTrack");
-
 if (videoTrack) {
 
     activarCarrusel(videoTrack);
 
 }
-
 
 /* =====================================================
    BOTÓN VOLVER ARRIBA
@@ -245,8 +230,6 @@ if (videoTrack) {
 
 const topBtn =
     document.getElementById("topBtn");
-
-
 if (topBtn) {
 
     window.addEventListener("scroll", () => {
@@ -278,17 +261,13 @@ if (topBtn) {
 
 }
 
-
 /* =====================================================
    ANIMACIONES AL HACER SCROLL
 ===================================================== */
-
 const elementosAnimados =
     document.querySelectorAll(
         ".comunicado, .comunicado-card, .student-card, .news-card, .gallery-item, .video-item, .comentario-item, .comment"
     );
-
-
 if (
     elementosAnimados.length > 0 &&
     "IntersectionObserver" in window
@@ -345,52 +324,37 @@ if (
 
 }
 
-
 /* =====================================================
    VISOR DE COMUNICADOS
 ===================================================== */
-
 const modalComunicado =
     document.getElementById(
         "modalComunicado"
     );
-
-
 const imagenComunicado =
     document.getElementById(
         "imagenComunicado"
     );
 
-
 /* =====================================================
    ABRIR COMUNICADO
 ===================================================== */
-
 function abrirComunicado(imagen) {
-
     if (
         !modalComunicado ||
         !imagenComunicado
     ) return;
-
-
     imagenComunicado.src = imagen;
-
     modalComunicado.classList.add(
         "activo"
     );
-
-
     document.body.style.overflow =
         "hidden";
-
 }
-
 
 /* =====================================================
    CERRAR COMUNICADO
 ===================================================== */
-
 function cerrarComunicado() {
 
     if (
@@ -410,11 +374,9 @@ function cerrarComunicado() {
 
 }
 
-
 /* =====================================================
    CERRAR AL HACER CLIC FUERA
 ===================================================== */
-
 if (modalComunicado) {
 
     modalComunicado.addEventListener(
@@ -435,11 +397,9 @@ if (modalComunicado) {
 
 }
 
-
 /* =====================================================
    CERRAR CON ESC
 ===================================================== */
-
 document.addEventListener(
     "keydown",
     event => {
@@ -455,7 +415,6 @@ document.addEventListener(
     }
 );
 
-
 /* =====================================================
    GALERÍA DE FOTOS
 ===================================================== */
@@ -464,32 +423,22 @@ const photoButtons =
     document.querySelectorAll(
         ".photo-thumb"
     );
-
-
 const mainPhoto =
     document.getElementById(
         "mainPhoto"
     );
-
-
 const photoTitle =
     document.getElementById(
         "photoTitle"
     );
-
-
 const photoCategory =
     document.getElementById(
         "photoCategory"
     );
-
-
 const photoDescription =
     document.getElementById(
         "photoDescription"
     );
-
-
 photoButtons.forEach(button => {
 
     button.addEventListener(
@@ -587,78 +536,58 @@ photoButtons.forEach(button => {
 
 });
 
-
 /* =====================================================
    GALERÍA DE VIDEOS
    MP4 + YOUTUBE
 ===================================================== */
-
 const videoMain =
     document.getElementById(
         "videoMain"
     );
-
-
 const videoTitle =
     document.getElementById(
         "videoTitle"
     );
-
-
 const videoCategory =
     document.getElementById(
         "videoCategory"
     );
-
-
 const videoDescription =
     document.getElementById(
         "videoDescription"
     );
-
-
 const videoButtons =
     document.querySelectorAll(
         ".video-thumb"
     );
 
-
 /* =====================================================
    ACTUALIZAR INFORMACIÓN DEL VIDEO
 ===================================================== */
-
 function actualizarInformacionVideo(button) {
-
     if (videoTitle) {
 
         videoTitle.textContent =
             button.dataset.title || "";
 
     }
-
-
     if (videoCategory) {
 
         videoCategory.textContent =
             button.dataset.category || "";
 
     }
-
-
     if (videoDescription) {
 
         videoDescription.textContent =
             button.dataset.description || "";
 
     }
-
 }
-
 
 /* =====================================================
    DETENER VIDEO ACTUAL
 ===================================================== */
-
 function detenerVideoActual() {
 
     if (!videoMain) return;
@@ -711,101 +640,57 @@ function detenerVideoActual() {
 
 }
 
-
 /* =====================================================
    CARGAR VIDEO MP4
 ===================================================== */
-
 function cargarMP4(button) {
-
     if (!videoMain) return;
-
-
     const video =
         button.dataset.video;
-
-
     const poster =
         button.dataset.poster || "";
 
-
     /* DETENER ANTERIOR */
-
     detenerVideoActual();
-
-
     /* LIMPIAR CONTENEDOR */
-
     videoMain.innerHTML = "";
-
-
     /* CREAR VIDEO */
-
     const elementoVideo =
         document.createElement(
             "video"
         );
-
-
     elementoVideo.id =
         "mainVideo";
-
-
     elementoVideo.controls =
         true;
-
-
     elementoVideo.playsInline =
         true;
-
-
     elementoVideo.preload =
         "metadata";
-
-
     /* POSTER */
-
     if (poster) {
-
         elementoVideo.poster =
             poster;
-
     }
 
-
     /* CREAR SOURCE */
-
     const source =
         document.createElement(
             "source"
         );
-
-
     source.src =
         video;
-
-
     source.type =
         "video/mp4";
-
-
     elementoVideo.appendChild(
         source
     );
-
-
     /* AGREGAR VIDEO */
-
     videoMain.appendChild(
         elementoVideo
     );
-
-
     /* CARGAR */
-
     elementoVideo.load();
-
-
     /*
        Intentar reproducción automática.
 
@@ -813,86 +698,52 @@ function cargarMP4(button) {
        el usuario podrá reproducirlo
        manualmente.
     */
-
     const promesa =
         elementoVideo.play();
-
-
     if (promesa !== undefined) {
-
         promesa.catch(() => {
-
             /* Autoplay bloqueado */
-
         });
-
     }
-
 }
-
 
 /* =====================================================
    CARGAR VIDEO DE YOUTUBE
 ===================================================== */
-
 function cargarYouTube(button) {
-
     if (!videoMain) return;
-
-
     /*
        Obtenemos solamente el ID.
-
        Ejemplo:
-
        IqbOoPuduTI
     */
-
     const videoID =
         button.dataset.video;
 
-
     /* DETENER ANTERIOR */
-
     detenerVideoActual();
 
-
     /* LIMPIAR CONTENEDOR */
-
     videoMain.innerHTML = "";
 
-
     /* CREAR IFRAME */
-
     const iframe =
         document.createElement(
             "iframe"
         );
-
-
     iframe.id =
         "mainYouTube";
-
-
-    /*
-       URL DEL REPRODUCTOR YOUTUBE
-    */
-
+    /* URL DEL REPRODUCTOR YOUTUBE */
     iframe.src =
         "https://www.youtube.com/embed/" +
         encodeURIComponent(videoID) +
         "?autoplay=1&rel=0";
-
-
     /* TÍTULO */
-
     iframe.title =
         button.dataset.title ||
         "Video de YouTube";
 
-
     /* BORDE */
-
     iframe.setAttribute(
         "frameborder",
         "0"
@@ -939,17 +790,13 @@ function cargarYouTube(button) {
 
 }
 
-
 /* =====================================================
    CLIC EN LOS VIDEOS
 ===================================================== */
-
 videoButtons.forEach(button => {
-
     button.addEventListener(
         "click",
         () => {
-
 
             /* ===============================
                QUITAR ACTIVO
@@ -1025,38 +872,28 @@ videoButtons.forEach(button => {
 
 });
 
-
 /* =====================================================
    COMENTARIOS
    PC = FLECHAS
    CELULAR = DESLIZAMIENTO
 ===================================================== */
-
 const comentarios =
     document.querySelectorAll(
         ".comentario-item"
     );
-
-
 const anterior =
     document.getElementById(
         "anterior"
     );
-
-
 const siguiente =
     document.getElementById(
         "siguiente"
     );
-
-
 let actual = 0;
-
 
 /* =====================================================
    MOSTRAR COMENTARIO
 ===================================================== */
-
 function mostrarComentario(numero) {
 
     if (!comentarios.length) return;
@@ -1078,23 +915,18 @@ function mostrarComentario(numero) {
     );
 
 }
-
-
 /* =====================================================
    PRIMER COMENTARIO
 ===================================================== */
-
 if (comentarios.length > 0) {
 
     mostrarComentario(0);
 
 }
 
-
 /* =====================================================
    SIGUIENTE
 ===================================================== */
-
 if (siguiente) {
 
     siguiente.addEventListener(
@@ -1127,11 +959,9 @@ if (siguiente) {
 
 }
 
-
 /* =====================================================
    ANTERIOR
 ===================================================== */
-
 if (anterior) {
 
     anterior.addEventListener(
@@ -1162,17 +992,13 @@ if (anterior) {
 
 }
 
-
 /* =====================================================
    MISIÓN Y VISIÓN REPLEGABLE
 ===================================================== */
-
 const botonesMV =
     document.querySelectorAll(
         ".mv-boton"
     );
-
-
 botonesMV.forEach(boton => {
 
     boton.addEventListener(
@@ -1219,11 +1045,9 @@ botonesMV.forEach(boton => {
 
 });
 
-
 /* =====================================================
    CERRAR MENÚ AL CAMBIAR A PC
 ===================================================== */
-
 window.addEventListener(
     "resize",
     () => {
@@ -1242,11 +1066,9 @@ window.addEventListener(
     }
 );
 
-
 /* =====================================================
    PREVENIR ARRASTRE ACCIDENTAL DE IMÁGENES
 ===================================================== */
-
 document
     .querySelectorAll(
         ".photo-thumb img, .video-thumb img"
@@ -1266,6 +1088,99 @@ document
     });
 
 
+
+
+
+
+
+
+
 /* =====================================================
-   FIN DEL JAVASCRIPT
+            ESTADÍSTICAS DEL COLEGIO
 ===================================================== */
+/* AÑOS DE SERVICIO */
+
+const anoInicioServicio = 1960;
+
+const anoActual = new Date().getFullYear();
+
+const anosServicio =
+    anoActual - anoInicioServicio;
+
+const contadorAnos =
+    document.getElementById("anosServicio");
+
+if (contadorAnos) {
+
+    contadorAnos.textContent =
+        anosServicio;
+
+}
+
+/* CONTADOR DE VISITAS */
+
+const contadorVisitas =
+    document.getElementById("contadorVisitas");
+
+const contadorID =
+    "colegio-jfb";
+
+async function registrarVisita() {
+
+    if (!contadorVisitas) {
+        return;
+    }
+
+    try {
+
+        const respuesta =
+            await fetch(
+                `https://api.counterapi.dev/v1/${contadorID}/visitas/up`
+            );
+
+        if (!respuesta.ok) {
+            throw new Error(
+                "No se pudo conectar con el contador"
+            );
+        }
+
+        const datos =
+            await respuesta.json();
+
+        /*
+           CounterAPI devuelve el número
+           actual de visitas.
+        */
+
+        if (
+            datos &&
+            datos.count !== undefined
+        ) {
+
+            contadorVisitas.textContent =
+                Number(datos.count)
+                    .toLocaleString("es-BO");
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Error en el contador de visitas:",
+            error
+        );
+
+        /*
+           Si el servicio no responde,
+           mostramos un guion en lugar
+           de romper la página.
+        */
+
+        contadorVisitas.textContent = "—";
+
+    }
+
+}
+/* Ejecutar */
+
+registrarVisita();
