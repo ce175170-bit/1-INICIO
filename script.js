@@ -1117,15 +1117,59 @@ if (contadorAnos) {
 
 }
 
-/* CONTADOR DE VISITAS */
+
+
+
+// =====================================================
+// FIREBASE - CONTADOR DE VISITAS
+// =====================================================
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+import {
+    getFirestore,
+    doc,
+    getDoc,
+    setDoc,
+    increment
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+
+// =====================================================
+// CONFIGURACIÓN DE FIREBASE
+// =====================================================
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB0xyjiYpAWwftNWA3pRrrKyKR8nOQeeZY",
+    authDomain: "colegio-jfb-a66fb.firebaseapp.com",
+    projectId: "colegio-jfb-a66fb",
+    storageBucket: "colegio-jfb-a66fb.firebasestorage.app",
+    messagingSenderId: "407961975361",
+    appId: "1:407961975361:web:7ee11654b5c7bdd61264c0",
+    measurementId: "G-LYJ2CRLMGT"
+};
+
+
+// =====================================================
+// INICIAR FIREBASE
+// =====================================================
+
+const appFirebase =
+    initializeApp(firebaseConfig);
+
+const db =
+    getFirestore(appFirebase);
+
+
+// =====================================================
+// CONTADOR DE VISITAS
+// =====================================================
 
 const contadorVisitas =
     document.getElementById("contadorVisitas");
 
-const contadorID =
-    "colegio-jfb";
 
-async function registrarVisita() {
+async function registrarVisitaFirebase() {
 
     if (!contadorVisitas) {
         return;
@@ -1133,54 +1177,65 @@ async function registrarVisita() {
 
     try {
 
-        const respuesta =
-            await fetch(
-                `https://api.counterapi.dev/v1/${contadorID}/visitas/up`
+        const referencia =
+            doc(
+                db,
+                "estadisticas",
+                "visitas"
             );
 
-        if (!respuesta.ok) {
-            throw new Error(
-                "No se pudo conectar con el contador"
-            );
-        }
 
-        const datos =
-            await respuesta.json();
+        // =================================================
+        // AUMENTAR EL CONTADOR
+        // =================================================
 
-        /*
-           CounterAPI devuelve el número
-           actual de visitas.
-        */
+        await setDoc(
+            referencia,
+            {
+                total: increment(1)
+            },
+            {
+                merge: true
+            }
+        );
 
-        if (
-            datos &&
-            datos.count !== undefined
-        ) {
+
+        // =================================================
+        // LEER EL NUEVO VALOR
+        // =================================================
+
+        const documento =
+            await getDoc(referencia);
+
+
+        if (documento.exists()) {
+
+            const datos =
+                documento.data();
+
+            const total =
+                Number(datos.total || 0);
 
             contadorVisitas.textContent =
-                Number(datos.count)
-                    .toLocaleString("es-BO");
+                total.toLocaleString("es-BO");
 
         }
 
     } catch (error) {
 
         console.error(
-            "Error en el contador de visitas:",
+            "Error en el contador de Firebase:",
             error
         );
-
-        /*
-           Si el servicio no responde,
-           mostramos un guion en lugar
-           de romper la página.
-        */
 
         contadorVisitas.textContent = "—";
 
     }
-
 }
-/* Ejecutar */
 
-registrarVisita();
+
+// =====================================================
+// EJECUTAR
+// =====================================================
+
+registrarVisitaFirebase();
