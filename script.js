@@ -593,12 +593,14 @@ function actualizarInformacionVideo(button) {
             button.dataset.title || "";
 
     }
+
     if (videoCategory) {
 
         videoCategory.textContent =
             button.dataset.category || "";
 
     }
+
     if (videoDescription) {
 
         videoDescription.textContent =
@@ -666,53 +668,89 @@ function detenerVideoActual() {
    CARGAR VIDEO MP4
 ===================================================== */
 function cargarMP4(button) {
+
     if (!videoMain) return;
+
     const video =
         button.dataset.video;
+
     const poster =
         button.dataset.poster || "";
 
+
     /* DETENER ANTERIOR */
+
     detenerVideoActual();
+
+
     /* LIMPIAR CONTENEDOR */
+
     videoMain.innerHTML = "";
+
+
     /* CREAR VIDEO */
+
     const elementoVideo =
         document.createElement(
             "video"
         );
+
+
     elementoVideo.id =
         "mainVideo";
+
     elementoVideo.controls =
         true;
+
     elementoVideo.playsInline =
         true;
+
     elementoVideo.preload =
         "metadata";
+
+
     /* POSTER */
+
     if (poster) {
+
         elementoVideo.poster =
             poster;
+
     }
 
+
     /* CREAR SOURCE */
+
     const source =
         document.createElement(
             "source"
         );
+
+
     source.src =
         video;
+
     source.type =
         "video/mp4";
+
+
     elementoVideo.appendChild(
         source
     );
+
+
     /* AGREGAR VIDEO */
+
     videoMain.appendChild(
         elementoVideo
     );
+
+
     /* CARGAR */
+
     elementoVideo.load();
+
+
     /*
        Intentar reproducción automática.
 
@@ -720,61 +758,199 @@ function cargarMP4(button) {
        el usuario podrá reproducirlo
        manualmente.
     */
+
     const promesa =
         elementoVideo.play();
+
     if (promesa !== undefined) {
+
         promesa.catch(() => {
+
             /* Autoplay bloqueado */
+
         });
+
     }
+
 }
 
 /* =====================================================
    CARGAR VIDEO DE YOUTUBE
 ===================================================== */
 function cargarYouTube(button) {
-    if (!videoMain) return;
-    /*
-       Obtenemos solamente el ID.
-       Ejemplo:
-       IqbOoPuduTI
-    */
-    const videoID =
-        button.dataset.video;
 
-    /* DETENER ANTERIOR */
+    if (!videoMain) return;
+
+
+    /* =================================================
+       OBTENER ID DEL VIDEO
+    ================================================= */
+
+    let videoID =
+        (button.dataset.video || "").trim();
+
+
+    /* =================================================
+       EXTRAER ID SI SE COLOCA UNA URL COMPLETA
+    ================================================= */
+
+    if (
+        videoID.includes("youtube.com") ||
+        videoID.includes("youtu.be")
+    ) {
+
+        try {
+
+            const url =
+                new URL(
+                    videoID.startsWith("http")
+                        ? videoID
+                        : "https://" + videoID
+                );
+
+
+            /* youtube.com/watch?v=ID */
+
+            if (
+                url.searchParams.get("v")
+            ) {
+
+                videoID =
+                    url.searchParams.get("v");
+
+            }
+
+
+            /* youtu.be/ID */
+
+            else if (
+                url.hostname.includes("youtu.be")
+            ) {
+
+                videoID =
+                    url.pathname
+                        .replace("/", "")
+                        .split("/")[0];
+
+            }
+
+
+            /* youtube.com/embed/ID */
+
+            else if (
+                url.pathname.includes("/embed/")
+            ) {
+
+                videoID =
+                    url.pathname
+                        .split("/embed/")[1]
+                        .split("/")[0];
+
+            }
+
+        } catch (error) {
+
+            console.error(
+                "URL de YouTube no válida:",
+                error
+            );
+
+            return;
+
+        }
+
+    }
+
+
+    /* =================================================
+       LIMPIAR ID
+    ================================================= */
+
+    videoID =
+        videoID
+            .split("?")[0]
+            .split("&")[0]
+            .split("/")[0]
+            .trim();
+
+
+    /* =================================================
+       COMPROBAR ID
+    ================================================= */
+
+    if (
+        !/^[a-zA-Z0-9_-]{11}$/.test(videoID)
+    ) {
+
+        console.error(
+            "ID de YouTube no válido:",
+            videoID
+        );
+
+        return;
+
+    }
+
+
+    /* =================================================
+       DETENER VIDEO ACTUAL
+    ================================================= */
+
     detenerVideoActual();
 
-    /* LIMPIAR CONTENEDOR */
+
+    /* =================================================
+       LIMPIAR CONTENEDOR
+    ================================================= */
+
     videoMain.innerHTML = "";
 
-    /* CREAR IFRAME */
+
+    /* =================================================
+       CREAR IFRAME
+    ================================================= */
+
     const iframe =
-        document.createElement(
-            "iframe"
-        );
+        document.createElement("iframe");
+
+
     iframe.id =
         "mainYouTube";
-    /* URL DEL REPRODUCTOR YOUTUBE */
+
+
+    /* =================================================
+       REPRODUCTOR YOUTUBE
+       SIN AUTOPLAY
+    ================================================= */
+
     iframe.src =
         "https://www.youtube.com/embed/" +
         encodeURIComponent(videoID) +
-        "?autoplay=1&rel=0";
-    /* TÍTULO */
+        "?rel=0";
+
+
+    /* =================================================
+       TÍTULO
+    ================================================= */
+
     iframe.title =
         button.dataset.title ||
         "Video de YouTube";
 
-    /* BORDE */
+
+    /* =================================================
+       BORDE
+    ================================================= */
+
     iframe.setAttribute(
         "frameborder",
         "0"
     );
 
 
-    /*
-       PERMISOS DEL REPRODUCTOR
-    */
+    /* =================================================
+       PERMISOS
+    ================================================= */
 
     iframe.setAttribute(
         "allow",
@@ -782,9 +958,9 @@ function cargarYouTube(button) {
     );
 
 
-    /*
+    /* =================================================
        POLÍTICA DE REFERENCIA
-    */
+    ================================================= */
 
     iframe.setAttribute(
         "referrerpolicy",
@@ -792,9 +968,9 @@ function cargarYouTube(button) {
     );
 
 
-    /*
+    /* =================================================
        PANTALLA COMPLETA
-    */
+    ================================================= */
 
     iframe.setAttribute(
         "allowfullscreen",
@@ -802,9 +978,9 @@ function cargarYouTube(button) {
     );
 
 
-    /*
+    /* =================================================
        AGREGAR IFRAME
-    */
+    ================================================= */
 
     videoMain.appendChild(
         iframe
@@ -816,6 +992,7 @@ function cargarYouTube(button) {
    CLIC EN LOS VIDEOS
 ===================================================== */
 videoButtons.forEach(button => {
+
     button.addEventListener(
         "click",
         () => {
@@ -937,6 +1114,7 @@ function mostrarComentario(numero) {
     );
 
 }
+
 /* =====================================================
    PRIMER COMENTARIO
 ===================================================== */
@@ -1021,6 +1199,7 @@ const botonesMV =
     document.querySelectorAll(
         ".mv-boton"
     );
+
 botonesMV.forEach(boton => {
 
     boton.addEventListener(
@@ -1109,17 +1288,10 @@ document
 
     });
 
-
-
-
-
-
-
-
-
 /* =====================================================
             ESTADÍSTICAS DEL COLEGIO
 ===================================================== */
+
 /* AÑOS DE SERVICIO */
 
 const anoInicioServicio = 1960;
@@ -1140,13 +1312,13 @@ if (contadorAnos) {
 }
 
 
-
-
 // =====================================================
 // FIREBASE - CONTADOR DE VISITAS
 // =====================================================
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
 import {
     getFirestore,
@@ -1162,13 +1334,28 @@ import {
 // =====================================================
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB0xyjiYpAWwftNWA3pRrrKyKR8nOQeeZY",
-    authDomain: "colegio-jfb-a66fb.firebaseapp.com",
-    projectId: "colegio-jfb-a66fb",
-    storageBucket: "colegio-jfb-a66fb.firebasestorage.app",
-    messagingSenderId: "407961975361",
-    appId: "1:407961975361:web:7ee11654b5c7bdd61264c0",
-    measurementId: "G-LYJ2CRLMGT"
+
+    apiKey:
+        "AIzaSyB0xyjiYpAWwftNWA3pRrrKyKR8nOQeeZY",
+
+    authDomain:
+        "colegio-jfb-a66fb.firebaseapp.com",
+
+    projectId:
+        "colegio-jfb-a66fb",
+
+    storageBucket:
+        "colegio-jfb-a66fb.firebasestorage.app",
+
+    messagingSenderId:
+        "407961975361",
+
+    appId:
+        "1:407961975361:web:7ee11654b5c7bdd61264c0",
+
+    measurementId:
+        "G-LYJ2CRLMGT"
+
 };
 
 
@@ -1188,13 +1375,17 @@ const db =
 // =====================================================
 
 const contadorVisitas =
-    document.getElementById("contadorVisitas");
+    document.getElementById(
+        "contadorVisitas"
+    );
 
 
 async function registrarVisitaFirebase() {
 
     if (!contadorVisitas) {
+
         return;
+
     }
 
     try {
@@ -1212,13 +1403,18 @@ async function registrarVisitaFirebase() {
         // =================================================
 
         await setDoc(
+
             referencia,
+
             {
-                total: increment(1)
+                total:
+                    increment(1)
             },
+
             {
                 merge: true
             }
+
         );
 
 
@@ -1227,19 +1423,27 @@ async function registrarVisitaFirebase() {
         // =================================================
 
         const documento =
-            await getDoc(referencia);
+            await getDoc(
+                referencia
+            );
 
 
-        if (documento.exists()) {
+        if (
+            documento.exists()
+        ) {
 
             const datos =
                 documento.data();
 
             const total =
-                Number(datos.total || 0);
+                Number(
+                    datos.total || 0
+                );
 
             contadorVisitas.textContent =
-                total.toLocaleString("es-BO");
+                total.toLocaleString(
+                    "es-BO"
+                );
 
         }
 
@@ -1250,9 +1454,11 @@ async function registrarVisitaFirebase() {
             error
         );
 
-        contadorVisitas.textContent = "—";
+        contadorVisitas.textContent =
+            "—";
 
     }
+
 }
 
 

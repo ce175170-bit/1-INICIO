@@ -1,37 +1,39 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Colegio J.F.B.</title>
+    <title>Colegio J.F.B. - Juan Francisco Bohórquez</title>
 
     <!-- Información para Google -->
-    <meta name="description"
-          content="Página web del Colegio Juan Francisco Bohórquez de Betanzos, Potosí, Bolivia. Noticias, comunicados, estudiantes, actividades, fotografías y videos de nuestra comunidad educativa.">
-
+    <meta name="description" content="Página web del Colegio Juan Francisco Bohórquez de Betanzos, Potosí, Bolivia. Noticias, comunicados, estudiantes, actividades, fotografías y videos de nuestra comunidad educativa.">
     <meta name="robots" content="index, follow">
-
+    
+    <!-- Vista previa al compartir en WhatsApp, Facebook, Messenger, etc. -->
+    <meta property="og:title" content="Colegio J.F.B. - Juan Francisco Bohórquez">
+    <meta property="og:description" content="Página web del Colegio Juan Francisco Bohórquez de Betanzos, Potosí, Bolivia.">
+    <meta property="og:image" content="https://ce175170-bit.github.io/1-INICIO/img/MEJORADO.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ce175170-bit.github.io/1-INICIO/">
+    
+    <!-- Ícono de la página -->
+    <link rel="icon" type="image/png" href="img/MEJORADO.png">
+    
+    <!-- Ícono para celulares iPhone/iPad -->
+    <link rel="apple-touch-icon" href="img/MEJORADO.png">
+    
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="icon"
-          type="image/png"
-          href="img/MEJORADO.png">
-
-    <link rel="stylesheet"
-          href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-
 
 <body>
 <!-- ================= HEADER ================= -->
@@ -573,16 +575,12 @@
 
     <div class="section-title light">
         <span>EXPERIENCIAS</span>
-
         <h2>Galería de videos</h2>
-
         <p>
             Descubre mediante nuestros videos las actividades,
             eventos y experiencias de nuestra institución.
         </p>
     </div>
-
-
     <div class="video-gallery">
 
         <!-- ================= VIDEO PRINCIPAL ================= -->
@@ -593,40 +591,30 @@
                 id="mainVideo"
                 controls
                 playsinline
-                poster="img/Portada Videos.png">
-
+                poster="img/escudo completo.png">
                 <source
                     src="videos/pueba.mp4"
                     type="video/mp4">
-
                 Tu navegador no soporta videos.
             </video>
-
         </div>
-
 
         <!-- ================= INFORMACIÓN ================= -->
         <div class="video-information">
-
             <span id="videoCategory">
                 ACTIVIDAD INSTITUCIONAL
             </span>
-
             <h3 id="videoTitle">
                 Actividades de nuestra institución
             </h3>
-
             <p id="videoDescription">
                 Conoce algunos de los momentos más importantes
                 de nuestra comunidad educativa.
             </p>
-
         </div>
-
 
         <!-- ================= MINIATURAS ================= -->
         <div class="video-thumbnails">
-
 
             <!-- ================= VIDEO MP4 ================= -->
 
@@ -643,15 +631,10 @@
                     src="img/bulling.png"
                     alt="Video sobre bullying">
 
-                <span>
-                    <i class="fa-solid fa-play"></i>
-                </span>
-
+                <span><i class="fa-solid fa-play"></i></span>
             </button>
 
-
             <!-- ================= VIDEO MP4 ================= -->
-
             <button
                 class="video-thumb"
                 data-type="mp4"
@@ -664,39 +647,28 @@
                 <img
                     src="img/celular.png"
                     alt="Video sobre uso del celular">
-
-                <span>
-                    <i class="fa-solid fa-play"></i>
-                </span>
-
+                <span><i class="fa-solid fa-play"></i></span>
             </button>
 
-
-            <!-- ================= VIDEO YOUTUBE ================= -->
+            <!-- ================= VIDEO YOUTUBE ================= --> 
 
             <button
                 class="video-thumb"
                 data-type="youtube"
                 data-video="IqbOoPuduTI"
-                data-title="Video de nuestra institución"
-                data-category="ACTIVIDAD INSTITUCIONAL"
-                data-description="Disfruta de este video de YouTube relacionado con las actividades de nuestra institución.">
+                data-title="Consejos para prevenir la autolesión"
+                data-category="TU BIENESTAR IMPORTA"
+                data-description="Si estás pasando por un momento difícil, no estás solo/a. Habla con un familiar, docente, orientador u otro adulto de confianza. Pedir ayuda es un acto de valentía.">
 
                 <img
                     src="img/autolesion.png"
                     alt="Video de YouTube">
-
-                <span>
-                    <i class="fa-solid fa-play"></i>
-                </span>
-
+                <span><i class="fa-solid fa-play"></i></span>
             </button>
 
-
+            
         </div>
-
     </div>
-
 </section>
 
 <!-- ================= COMENTARIOS ================= -->
