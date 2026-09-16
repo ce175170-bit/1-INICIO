@@ -465,110 +465,129 @@
             de nuestra comunidad educativa.
         </p>
     </div>
-    <div class="photo-gallery">
-        <div class="photo-main">
-            <img
-                id="mainPhoto"
-                src="Galeria fotos/ago.jpg"
-                alt="Actividad educativa">
-            <div class="photo-overlay">
-                <div>
-                    <span id="photoCategory">
-                        ANIVERSARIO DE BOLIVIA
-                    </span>
-                    <h3 id="photoTitle">
-                        Desfile, 6 de agosto de 2026
-                    </h3>
-                    <p id="photoDescription">
-                        <strong>Actividades y experiencias compartidas
-                        por nuestra comunidad educativa.</strong>
-                    </p>
-                </div>
+
+    <!-- ================= CARRUSEL ================= -->
+    <div class="jfb-galeria">
+        <!-- FLECHA ANTERIOR -->
+        <button
+            class="jfb-flecha jfb-anterior"
+            id="jfbAnterior"
+            aria-label="Fotografía anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- ÁREA DE FOTOS -->
+
+        <div
+            class="jfb-fotos"
+            id="jfbFotos">
+
+            <!-- FOTO 1 -->
+            <div class="jfb-foto active">
+                <img
+                    src="Galeria fotos/ago1.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 2 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago2.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 3 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago3.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 4 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago4.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 5 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago5.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 6 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago6.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 7 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago7.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 8 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago8.jpg"
+                    alt="Actividad del Colegio J.F.B.">
+            </div>
+            <!-- FOTO 9 -->
+            <div class="jfb-foto">
+                <img
+                    src="Galeria fotos/ago9.jpg"
+                    alt="Actividad del Colegio J.F.B.">
             </div>
         </div>
-        <div class="photo-thumbnails">
-            <button
-                class="photo-thumb active"
-                data-image="Galeria fotos/ago1.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago1.jpg" alt="Foto 1">
-            </button>
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago2.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago2.jpg" alt="Foto 2">
-            </button>
+        <!-- FLECHA SIGUIENTE -->
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago3.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago3.jpg" alt="Foto 3">
-            </button>
+        <button
+            class="jfb-flecha jfb-siguiente"
+            id="jfbSiguiente"
+            aria-label="Fotografía siguiente">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago4.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago4.jpg" alt="Foto 4">
-            </button>
+    <!-- INDICADORES -->
+    <div
+        class="jfb-indicadores"
+        id="jfbIndicadores">
+    </div>
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago5.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago5.jpg" alt="Foto 5">
-            </button>
+    <!-- ================= VISOR COMPLETO ================= -->
+    <div
+        class="jfb-visor"
+        id="jfbVisor">
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago6.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago6.jpg" alt="Foto 5">
-            </button>
+        <!-- CERRAR -->
+        <button
+            class="jfb-cerrar"
+            id="jfbCerrar"
+            aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago7.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago7.jpg" alt="Foto 5">
-            </button>
+        <!-- ANTERIOR -->
+        <button
+            class="jfb-visor-flecha jfb-visor-anterior"
+            id="jfbVisorAnterior"
+            aria-label="Anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago8.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago8.jpg" alt="Foto 5">
-            </button>
+        <!-- IMAGEN GRANDE -->
+        <img
+            id="jfbImagenGrande"
+            src=""
+            alt="Fotografía ampliada">
 
-            <button
-                class="photo-thumb"
-                data-image="Galeria fotos/ago9.jpg"
-                data-title=""
-                data-category=""
-                data-description="">
-                <img src="Galeria fotos/ago9.jpg" alt="Foto 5">
-            </button>
-
-        </div>
+        <!-- SIGUIENTE -->
+        <button
+            class="jfb-visor-flecha jfb-visor-siguiente"
+            id="jfbVisorSiguiente"
+            aria-label="Siguiente">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
 </section>
 

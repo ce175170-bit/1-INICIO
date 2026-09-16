@@ -437,126 +437,699 @@ document.addEventListener(
     }
 );
 
+
 /* =====================================================
-   GALERÍA DE FOTOS
+          GALERÍA DE FOTOS — COLEGIO J.F.B.
+          PC = FLECHAS
+          CELULAR = DESLIZAMIENTO
+          CLIC = PANTALLA COMPLETA
 ===================================================== */
 
-const photoButtons =
-    document.querySelectorAll(
-        ".photo-thumb"
-    );
-const mainPhoto =
-    document.getElementById(
-        "mainPhoto"
-    );
-const photoTitle =
-    document.getElementById(
-        "photoTitle"
-    );
-const photoCategory =
-    document.getElementById(
-        "photoCategory"
-    );
-const photoDescription =
-    document.getElementById(
-        "photoDescription"
-    );
-photoButtons.forEach(button => {
+const jfbFotos =
+    document.querySelectorAll(".jfb-foto");
 
-    button.addEventListener(
+const jfbAnterior =
+    document.getElementById("jfbAnterior");
+
+const jfbSiguiente =
+    document.getElementById("jfbSiguiente");
+
+const jfbIndicadores =
+    document.getElementById("jfbIndicadores");
+
+const jfbVisor =
+    document.getElementById("jfbVisor");
+
+const jfbImagenGrande =
+    document.getElementById("jfbImagenGrande");
+
+const jfbCerrar =
+    document.getElementById("jfbCerrar");
+
+const jfbVisorAnterior =
+    document.getElementById("jfbVisorAnterior");
+
+const jfbVisorSiguiente =
+    document.getElementById("jfbVisorSiguiente");
+
+
+let jfbActual = 0;
+
+
+/* =====================================================
+              CREAR INDICADORES
+===================================================== */
+
+if (
+    jfbIndicadores &&
+    jfbFotos.length > 0
+) {
+
+    jfbFotos.forEach((foto, indice) => {
+
+        const indicador =
+            document.createElement("button");
+
+        indicador.type = "button";
+
+        indicador.setAttribute(
+            "aria-label",
+            "Ir a fotografía " + (indice + 1)
+        );
+
+        indicador.addEventListener(
+            "click",
+            () => {
+
+                jfbMostrar(indice);
+
+            }
+        );
+
+        jfbIndicadores.appendChild(
+            indicador
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+                 MOSTRAR FOTO
+===================================================== */
+
+function jfbMostrar(indice) {
+
+    if (!jfbFotos.length) return;
+
+
+    /*
+       Mantener el índice dentro
+       de los límites.
+    */
+
+    if (indice < 0) {
+
+        indice =
+            jfbFotos.length - 1;
+
+    }
+
+    if (
+        indice >=
+        jfbFotos.length
+    ) {
+
+        indice = 0;
+
+    }
+
+
+    jfbActual = indice;
+
+
+    /* ==============================
+       CAMBIAR FOTO
+    ============================== */
+
+    jfbFotos.forEach(
+        (foto, posicion) => {
+
+            foto.classList.toggle(
+                "active",
+                posicion === jfbActual
+            );
+
+        }
+    );
+
+
+    /* ==============================
+       CAMBIAR INDICADORES
+    ============================== */
+
+    if (jfbIndicadores) {
+
+        const indicadores =
+            jfbIndicadores.querySelectorAll(
+                "button"
+            );
+
+        indicadores.forEach(
+            (indicador, posicion) => {
+
+                indicador.classList.toggle(
+                    "active",
+                    posicion === jfbActual
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+                 FOTO ANTERIOR
+===================================================== */
+
+if (jfbAnterior) {
+
+    jfbAnterior.addEventListener(
         "click",
         () => {
 
-
-            /* QUITAR ACTIVO */
-
-            photoButtons.forEach(btn => {
-
-                btn.classList.remove(
-                    "active"
-                );
-
-            });
-
-
-            /* ACTIVAR BOTÓN */
-
-            button.classList.add(
-                "active"
+            jfbMostrar(
+                jfbActual - 1
             );
 
+        }
+    );
 
-            /* EFECTO DE CAMBIO */
-
-            if (mainPhoto) {
-
-                mainPhoto.style.opacity =
-                    "0";
-
-            }
+}
 
 
-            setTimeout(() => {
+/* =====================================================
+                 FOTO SIGUIENTE
+===================================================== */
+
+if (jfbSiguiente) {
+
+    jfbSiguiente.addEventListener(
+        "click",
+        () => {
+
+            jfbMostrar(
+                jfbActual + 1
+            );
+
+        }
+    );
+
+}
 
 
-                /* CAMBIAR IMAGEN */
+/* =====================================================
+              ABRIR PANTALLA COMPLETA
+===================================================== */
 
-                if (mainPhoto) {
+function jfbAbrirVisor() {
 
-                    mainPhoto.src =
-                        button.dataset.image;
-
-                }
-
-
-                /* CAMBIAR TÍTULO */
-
-                if (photoTitle) {
-
-                    photoTitle.textContent =
-                        button.dataset.title ||
-                        "";
-
-                }
+    if (
+        !jfbFotos.length ||
+        !jfbVisor ||
+        !jfbImagenGrande
+    ) return;
 
 
-                /* CAMBIAR CATEGORÍA */
-
-                if (photoCategory) {
-
-                    photoCategory.textContent =
-                        button.dataset.category ||
-                        "";
-
-                }
+    const imagen =
+        jfbFotos[jfbActual].querySelector(
+            "img"
+        );
 
 
-                /* CAMBIAR DESCRIPCIÓN */
-
-                if (photoDescription) {
-
-                    photoDescription.textContent =
-                        button.dataset.description ||
-                        "";
-
-                }
+    if (!imagen) return;
 
 
-                /* MOSTRAR */
+    jfbImagenGrande.src =
+        imagen.src;
 
-                if (mainPhoto) {
+    jfbImagenGrande.alt =
+        imagen.alt ||
+        "Fotografía del Colegio J.F.B.";
 
-                    mainPhoto.style.opacity =
-                        "1";
 
-                }
+    jfbVisor.classList.add(
+        "activo"
+    );
 
-            }, 180);
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* =====================================================
+               CERRAR PANTALLA COMPLETA
+===================================================== */
+
+function jfbCerrarVisor() {
+
+    if (!jfbVisor) return;
+
+
+    jfbVisor.classList.remove(
+        "activo"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+
+    if (jfbImagenGrande) {
+
+        jfbImagenGrande.src = "";
+
+    }
+
+}
+
+
+/* =====================================================
+              CLIC EN LAS FOTOS
+===================================================== */
+
+jfbFotos.forEach(foto => {
+
+    const imagen =
+        foto.querySelector("img");
+
+
+    if (!imagen) return;
+
+
+    imagen.addEventListener(
+        "click",
+        () => {
+
+            jfbAbrirVisor();
+
+        }
+    );
+
+
+    /* Evitar arrastre */
+
+    imagen.addEventListener(
+        "dragstart",
+        event => {
+
+            event.preventDefault();
 
         }
     );
 
 });
+
+
+/* =====================================================
+            CERRAR CON BOTÓN X
+===================================================== */
+
+if (jfbCerrar) {
+
+    jfbCerrar.addEventListener(
+        "click",
+        () => {
+
+            jfbCerrarVisor();
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+             CLIC FUERA DE LA FOTO
+===================================================== */
+
+if (jfbVisor) {
+
+    jfbVisor.addEventListener(
+        "click",
+        event => {
+
+            if (
+                event.target ===
+                jfbVisor
+            ) {
+
+                jfbCerrarVisor();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+            FLECHA ANTERIOR DEL VISOR
+===================================================== */
+
+if (jfbVisorAnterior) {
+
+    jfbVisorAnterior.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+            jfbMostrar(
+                jfbActual - 1
+            );
+
+            jfbActualizarVisor();
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+            FLECHA SIGUIENTE DEL VISOR
+===================================================== */
+
+if (jfbVisorSiguiente) {
+
+    jfbVisorSiguiente.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+            jfbMostrar(
+                jfbActual + 1
+            );
+
+            jfbActualizarVisor();
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+              ACTUALIZAR VISOR
+===================================================== */
+
+function jfbActualizarVisor() {
+
+    if (
+        !jfbFotos.length ||
+        !jfbImagenGrande
+    ) return;
+
+
+    const imagen =
+        jfbFotos[jfbActual].querySelector(
+            "img"
+        );
+
+
+    if (!imagen) return;
+
+
+    jfbImagenGrande.src =
+        imagen.src;
+
+    jfbImagenGrande.alt =
+        imagen.alt ||
+        "Fotografía del Colegio J.F.B.";
+
+}
+
+
+/* =====================================================
+                 TECLADO PC
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        /*
+           Solo actuar cuando
+           el visor está abierto.
+        */
+
+        if (
+            !jfbVisor ||
+            !jfbVisor.classList.contains(
+                "activo"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        /* IZQUIERDA */
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            jfbMostrar(
+                jfbActual - 1
+            );
+
+            jfbActualizarVisor();
+
+        }
+
+
+        /* DERECHA */
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            jfbMostrar(
+                jfbActual + 1
+            );
+
+            jfbActualizarVisor();
+
+        }
+
+
+        /* ESC */
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            jfbCerrarVisor();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+          DESLIZAMIENTO EN GALERÍA PRINCIPAL
+===================================================== */
+
+let jfbInicioX = 0;
+let jfbInicioY = 0;
+
+
+if (jfbFotos.length > 0) {
+
+    const jfbGaleria =
+        document.querySelector(
+            ".jfb-galeria"
+        );
+
+
+    if (jfbGaleria) {
+
+        jfbGaleria.addEventListener(
+            "touchstart",
+            event => {
+
+                const toque =
+                    event.touches[0];
+
+                jfbInicioX =
+                    toque.clientX;
+
+                jfbInicioY =
+                    toque.clientY;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        jfbGaleria.addEventListener(
+            "touchend",
+            event => {
+
+                const toque =
+                    event.changedTouches[0];
+
+                const finalX =
+                    toque.clientX;
+
+                const finalY =
+                    toque.clientY;
+
+
+                const distanciaX =
+                    jfbInicioX -
+                    finalX;
+
+                const distanciaY =
+                    jfbInicioY -
+                    finalY;
+
+
+                /*
+                   Solo cambiar la foto
+                   si el movimiento
+                   es principalmente horizontal.
+                */
+
+                if (
+                    Math.abs(distanciaX) > 50 &&
+                    Math.abs(distanciaX) >
+                    Math.abs(distanciaY)
+                ) {
+
+                    if (
+                        distanciaX > 0
+                    ) {
+
+                        jfbMostrar(
+                            jfbActual + 1
+                        );
+
+                    } else {
+
+                        jfbMostrar(
+                            jfbActual - 1
+                        );
+
+                    }
+
+                }
+
+            },
+            {
+                passive: true
+            }
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+          DESLIZAMIENTO EN PANTALLA COMPLETA
+===================================================== */
+
+let jfbVisorInicioX = 0;
+let jfbVisorInicioY = 0;
+
+
+if (jfbVisor) {
+
+    jfbVisor.addEventListener(
+        "touchstart",
+        event => {
+
+            const toque =
+                event.touches[0];
+
+            jfbVisorInicioX =
+                toque.clientX;
+
+            jfbVisorInicioY =
+                toque.clientY;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    jfbVisor.addEventListener(
+        "touchend",
+        event => {
+
+            const toque =
+                event.changedTouches[0];
+
+            const finalX =
+                toque.clientX;
+
+            const finalY =
+                toque.clientY;
+
+
+            const distanciaX =
+                jfbVisorInicioX -
+                finalX;
+
+            const distanciaY =
+                jfbVisorInicioY -
+                finalY;
+
+
+            if (
+                Math.abs(distanciaX) > 50 &&
+                Math.abs(distanciaX) >
+                Math.abs(distanciaY)
+            ) {
+
+                if (
+                    distanciaX > 0
+                ) {
+
+                    jfbMostrar(
+                        jfbActual + 1
+                    );
+
+                } else {
+
+                    jfbMostrar(
+                        jfbActual - 1
+                    );
+
+                }
+
+
+                jfbActualizarVisor();
+
+            }
+
+        },
+        {
+            passive: true
+        }
+    );
+
+}
+
+
+/* =====================================================
+                 INICIAR GALERÍA
+===================================================== */
+
+if (jfbFotos.length > 0) {
+
+    jfbMostrar(0);
+
+}
+
+
 
 /* =====================================================
    GALERÍA DE VIDEOS
