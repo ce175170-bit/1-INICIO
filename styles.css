@@ -427,7 +427,7 @@ select {
             rgba(5,30,15,.72) 68%,
             rgba(0,0,0,.90) 100%
         ),
-        url("img/bohorquez.jpg") center center / cover no-repeat;
+        url("img/bohorquez.webp") center center / cover no-repeat;
 }
 
 /* LUCES */
