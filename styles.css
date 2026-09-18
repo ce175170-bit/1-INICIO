@@ -728,31 +728,37 @@ select {
     font-size: 22px;
     transition: .3s;
 }
-/* CONTENIDO */
+/* =====================================================
+   CONTENIDO MISIÓN Y VISIÓN — APERTURA DIRECTA
+===================================================== */
+
 .mv-contenido {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 25px;
+    display: none;
+    padding: 22px 25px;
+
     background:
         linear-gradient(
             135deg,
             #0c130f,
             #101a14
         );
-    transition:
-        max-height .4s ease,
-        padding .4s ease;
 }
+
 .mv-contenido p {
     margin: 0;
     color: #aebbb3;
     font-size: 14px;
     line-height: 1.8;
 }
-/* ACTIVO */
+
+/* =====================================================
+   ACTIVO
+===================================================== */
+
 .mv-item.activo {
     border-color: rgba(89,211,129,.45);
 }
+
 .mv-item.activo .mv-boton {
     background:
         linear-gradient(
@@ -761,20 +767,23 @@ select {
             #062a14,
             #0d4b27
         );
+
     color: white;
 }
+
 .mv-item.activo .mv-icono {
     background: white;
     color: #0a3d1e;
 }
+
 .mv-item.activo .mv-flecha {
     background: white;
     color: #0a3d1e;
     transform: rotate(45deg);
 }
+
 .mv-item.activo .mv-contenido {
-    max-height: 250px;
-    padding: 22px 25px;
+    display: block;
 }
 
 /* =====================================================
@@ -2301,4 +2310,62 @@ select {
             translateY(0);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+           EFECTO APARICIÓN PROGRESIVA AL HACER SCROLL
+   ===================================================== */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 1.25s ease,
+        transform 1.25s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+    .scroll-reveal {
+        transform: translateY(30px);
+        transition:
+            opacity 1.1s ease,
+            transform 1.1s ease;
+    }
+}
+
+/* RESPETAR A USUARIOS QUE PREFIEREN MENOS ANIMACIÓN */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+
+
+
+
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -125,7 +124,7 @@
 </section>
 
 <!-- ============== MISIÓN Y VISIÓN ========== -->
-<section class="mision-vision" id="mision-vision">
+<section class="mision-vision scroll-reveal" id="mision-vision">
     <div class="section-title">
         <span>NUESTRA INSTITUCIÓN</span>
         <h2>Misión y Visión</h2>
@@ -157,6 +156,7 @@
                 </p>
             </div>
         </div>
+
         <!-- VISIÓN -->
         <div class="mv-item">
             <button class="mv-boton">
@@ -179,6 +179,7 @@
                 </p>
             </div>
         </div>
+
         <!-- ANIVERSARIO -->
         <div class="mv-item">
             <button class="mv-boton">
@@ -201,6 +202,7 @@
                 </p>
             </div>
         </div>
+
         <!-- LEMAS -->
         <div class="mv-item">
             <button class="mv-boton">
@@ -227,7 +229,7 @@
 
 <!-- =============== COMUNICADOS ================= -->
 <section>
-    <section class="section comunicados-section" id="comunicados">
+    <section class="section comunicados-section scroll-reveal" id="comunicados">
         <div class="section-title">
             <span>INFORMACIÓN INSTITUCIONAL</span>
             <h2>Comunicados</h2>
@@ -236,27 +238,31 @@
                 informado sobre las actividades de nuestra institución.
             </p>
         </div>
+
         <div class="comunicados-container">
 
-            <!-- COMUNICADO 1 -->
+            <!-- 🟡 COMUNICADO 1 🟡 -->
             <article class="comunicado">
                 <div class="comunicado-header">
                     <div>
-                        <span class="comunicado-label">COMUNICADO</span>
-                        <h3>Nuevo horario de ingreso</h3>
+                        <span class="comunicado-label">INVITACION</span> 
+                        <h3>Concurso de danzas del Magisterio</h3> 
                     </div>
                     <span class="comunicado-fecha">
-                        6 de septiembre de 2026
+                        17 de septiembre de 2026
                     </span>
                 </div>
+
                 <div class="comunicado-imagen">
-                    <img src="Comunicados/comunicado1.png"
+                    <img src="Comunicados/comunicado1.jpeg" 
                         alt="Comunicado institucional">
                 </div>
+
                 <div class="comunicado-footer">
                     <p>
-                        El nuevo horario se aplicara desde el lunes, 7 de septiembre de 2026.
+                        Ven a disfrutar de las mejores danzas.
                     </p>
+
                     <button
                         class="ver-comunicado"
                         onclick="abrirComunicado('Comunicados/comunicado1.png')">
@@ -265,65 +271,42 @@
                     </button>
                 </div>
             </article>
-
-            <!-- COMUNICADO 2 -->
+            
+            <!-- 🟡 COMUNICADO 2 🟡 -->
             <article class="comunicado">
                 <div class="comunicado-header">
                     <div>
-                        <span class="comunicado-label">COMUNICADO</span>
-                        <h3>Invitación a elección de la reina de magisterio</h3>
+                        <span class="comunicado-label">COMUNICADO</span> 
+                        <h3>Nuevo horario de ingreso</h3> 
                     </div>
+
                     <span class="comunicado-fecha">
                         6 de septiembre de 2026
                     </span>
                 </div>
+
                 <div class="comunicado-imagen">
-                    <img src="Comunicados/comunicado2.jpeg"
-                        alt="Aviso institucional">
+                    <img src="Comunicados/comunicado2.png" 
+                        alt="Comunicado institucional">
                 </div>
+
                 <div class="comunicado-footer">
                     <p>
-                        Invitacion a la gran eleccion de la reina de magisterio de 2026.
+                        El nuevo horario se aplicara desde el lunes, 7 de septiembre de 2026.
                     </p>
+
                     <button
                         class="ver-comunicado"
-                        onclick="abrirComunicado('Comunicados/comunicado2.jpeg')">
+                        onclick="abrirComunicado('Comunicados/comunicado1.png')">
                         <i class="fa-solid fa-expand"></i>
                         Ver comunicado completo
                     </button>
                 </div>
             </article>
-
-            <!-- COMUNICADO 3 -->
-            <article class="comunicado">
-                <div class="comunicado-header">
-                    <div>
-                        <span class="comunicado-label">IMPORTANTE</span>
-                        <h3>Invitación a ensayos</h3>
-                    </div>
-                    <span class="comunicado-fecha">
-                        6 de septiembre de 2026
-                    </span>
-                </div>
-                <div class="comunicado-imagen">
-                    <img src="Comunicados/comunicado3.jpeg"
-                        alt="Comunicado para estudiantes">
-                </div>
-                <div class="comunicado-footer">
-                    <p>
-                        Se hace la invitacion a ser parte del grupo que participara 
-                        en la entrada en honor a la Virgen de Guadalupe de Sucre.
-                    </p>
-                    <button
-                        class="ver-comunicado"
-                        onclick="abrirComunicado('Comunicados/comunicado3.jpeg')">
-                        <i class="fa-solid fa-expand"></i>
-                        Ver comunicado completo
-                    </button>
-                </div>
-            </article>
+                       
         </div>
     </section>
+
     <!-- ================= VISOR DEL COMUNICADO ================= -->
     <div class="modal-comunicado" id="modalComunicado">
         <button
@@ -331,6 +314,7 @@
             onclick="cerrarComunicado()">
             <i class="fa-solid fa-xmark"></i>
         </button>
+
         <img
             id="imagenComunicado"
             src=""
@@ -339,7 +323,7 @@
 </section>
 
 <!-- ================ DESTACADOS ================= -->
-<section class="section section-light" id="destacados">
+<section class="section section-light scroll-reveal" id="destacados">   
     <div class="section-title">
         <span>RECONOCIMIENTO</span>
         <h2>Estudiantes destacados</h2>
@@ -348,16 +332,22 @@
             de nuestros estudiantes.
         </p>
     </div>
+
     <div class="students">
         <article class="student-card">
             <div class="student-photo">
                 <img src="img/mejores.png" alt="Estudiantes destacados">                
             </div>
+
             <div class="student-info">
                 <span>ESTUDIANTES DESTACADO</span>
-                <h3>1° Dahiana Michelle Checa Lupa <br>
+
+                <h3>
+                    1° Dahiana Michelle Checa Lupa <br>
                     2° Mibia Yubiza Llanos Flores <br>
-                    3° Jhon Cefe Flores Heredia</h3>
+                    3° Jhon Cefe Flores Heredia
+                </h3>
+
                 <p>                    
                     🥇 <strong>Primer lugar: (1° B)</strong> Por su excelente desempeño académico y compromiso constante. <br>
                     🥈 <strong>Segundo lugar: (3° A)</strong> Por su dedicación, responsabilidad y espíritu de superación. <br>
@@ -368,6 +358,7 @@
                     aprendiendo, creciendo y alcanzando nuevas metas. <br>
                     “El éxito no es llegar primero, sino nunca dejar de avanzar.”
                 </p>
+
                 <div class="achievement">
                     <i class="fa-solid fa-trophy"></i>
                     <span>Excelencia académica</span>
@@ -375,10 +366,11 @@
             </div>
         </article>
     </div>
+    
 </section>
 
 <!-- ================ NOTICIAS ================= -->
-<section class="section" id="noticias">
+<section class="section scroll-reveal" id="noticias">
     <div class="section-title">
         <span>ACTUALIDAD</span>
         <h2>Noticias</h2>
@@ -388,17 +380,20 @@
         </p>
     </div>
 
-            <!--  Noticia 1 -->
     <div class="news-grid">
-        <article class="news-card">
+
+        <!-- Noticia 1 -->
+        <article class="news-card scroll-stagger">
             <img src="Noticias/noti1.jpg" alt="Noticia">
+
             <div class="news-content">
                 <small>6 Septiembre 2026</small>
-                <h3>
-                    
+
+                <h3>                    
                     Betanzos es parte del programa Bol-39 para la construcción de 
                     infraestructura deportiva educativa.
                 </h3>
+
                 <p>
                     La mañana de este miércoles 2 
                     de septiembre, el alcalde municipal 
@@ -406,40 +401,48 @@
                     participó en la ciudad de Potosí en la firma de convenio 
                     con el Fondo Nacional de Inversión Productiva y Social (FPS)
                 </p>
+
                 <a href="https://www.facebook.com/share/p/1CegZ1Lhzf/">
                     Leer más →
                 </a>
             </div>
         </article>
 
-                <!--  Noticia 2 -->
-        <article class="news-card">
+        <!-- Noticia 2 -->
+        <article class="news-card scroll-stagger">
             <img src="Noticias/noti2.jpg" alt="Noticia">
+
             <div class="news-content">
                 <small>6 Septiembre 2026</small>
+
                 <h3>
                     Minería ilegal extiende sus tentáculos en medio de amenazas de muerte
                 </h3>
+
                 <p>
                    Una operación de explotación aurífera de considerable magnitud fue 
                    intervenida por la Autoridad Jurisdiccional Administrativa Minera 
                    (AJAM) en el sector de Chipihuayco, municipio de Villazón, donde 
                    alrededor de 40 personas......
                 </p>
+
                 <a href="https://elpotosi.net/local/20260906_mineria-ilegal-extiende-sus-tentaculos-en-medio-de-amenazas-de-muerte.html">
                     Leer más →
                 </a>
             </div>
         </article>
 
-                <!--  Noticia 3 -->
-        <article class="news-card">
+        <!-- Noticia 3 -->
+        <article class="news-card scroll-stagger">
             <img src="Noticias/noti3.jpg" alt="Noticia">
+
             <div class="news-content">
                 <small>6 Septiembre 2026</small>
+
                 <h3>
                     Sucre: El primer día del convite se extendió por 11 horas
                 </h3>
+
                 <p>
                     La primera jornada de la “promesa de fe” de la Virgen de 
                     Guadalupe en Sucre concluyó este sábado a las 22:15, después 
@@ -447,6 +450,7 @@
                     se desarrolló con orden y con un cumplimiento mayoritario de 
                     los horarios establecidos.
                 </p>
+
                 <a href="https://elpotosi.net/nacional/20260906_sucre-el-primer-dia-del-convite-se-extendio-por-11-horas.html">
                     Leer más →
                 </a>
@@ -456,7 +460,7 @@
 </section>
 
 <!-- ================= GALERÍA DE FOTOS ================= -->
-<section class="media-section" id="fotos">
+<section class="media-section scroll-reveal" id="fotos">
     <div class="section-title">
         <span>NUESTRA HISTORIA</span>
         <h2>Galería de fotos</h2>
@@ -465,30 +469,36 @@
             de nuestra comunidad educativa.
         </p>
     </div>
+
     <div class="photo-gallery">
         <div class="photo-main">
             <img
                 id="mainPhoto"
                 src="Galeria fotos/ago.jpg"
                 alt="Actividad educativa">
+
             <div class="photo-overlay">
                 <div>
                     <span id="photoCategory">
                         ANIVERSARIO DE BOLIVIA
                     </span>
+
                     <h3 id="photoTitle">
                         Desfile, 6 de agosto de 2026
                     </h3>
+
                     <p id="photoDescription">
-                        <strong>Actividades y experiencias compartidas
-                        por nuestra comunidad educativa.</strong>
+                        <strong>
+                            Actividades y experiencias compartidas
+                            por nuestra comunidad educativa.
+                        </strong>
                     </p>
                 </div>
             </div>
         </div>
+
         <div class="photo-thumbnails">
-            <button
-                class="photo-thumb active"
+            <button class="photo-thumb active"
                 data-image="Galeria fotos/ago1.jpg"
                 data-title=""
                 data-category=""
@@ -496,8 +506,7 @@
                 <img src="Galeria fotos/ago1.jpg" alt="Foto 1">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago2.jpg"
                 data-title=""
                 data-category=""
@@ -505,8 +514,7 @@
                 <img src="Galeria fotos/ago2.jpg" alt="Foto 2">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago3.jpg"
                 data-title=""
                 data-category=""
@@ -514,8 +522,7 @@
                 <img src="Galeria fotos/ago3.jpg" alt="Foto 3">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago4.jpg"
                 data-title=""
                 data-category=""
@@ -523,8 +530,7 @@
                 <img src="Galeria fotos/ago4.jpg" alt="Foto 4">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago5.jpg"
                 data-title=""
                 data-category=""
@@ -532,8 +538,7 @@
                 <img src="Galeria fotos/ago5.jpg" alt="Foto 5">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago6.jpg"
                 data-title=""
                 data-category=""
@@ -541,8 +546,7 @@
                 <img src="Galeria fotos/ago6.jpg" alt="Foto 5">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago7.jpg"
                 data-title=""
                 data-category=""
@@ -550,8 +554,7 @@
                 <img src="Galeria fotos/ago7.jpg" alt="Foto 5">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago8.jpg"
                 data-title=""
                 data-category=""
@@ -559,21 +562,19 @@
                 <img src="Galeria fotos/ago8.jpg" alt="Foto 5">
             </button>
 
-            <button
-                class="photo-thumb"
+            <button class="photo-thumb"
                 data-image="Galeria fotos/ago9.jpg"
                 data-title=""
                 data-category=""
                 data-description="">
                 <img src="Galeria fotos/ago9.jpg" alt="Foto 5">
             </button>
-
         </div>
     </div>
 </section>
 
 <!-- ================= GALERÍA DE VIDEOS ================= -->
-<section class="video-gallery-section" id="videos">
+<section class="video-gallery-section scroll-reveal" id="videos">
 
     <div class="section-title light">
         <span>EXPERIENCIAS</span>
@@ -583,12 +584,11 @@
             eventos y experiencias de nuestra institución.
         </p>
     </div>
+
     <div class="video-gallery">
 
-        <!-- ================= VIDEO PRINCIPAL ================= -->
+        <!-- VIDEO PRINCIPAL -->
         <div class="video-main" id="videoMain">
-
-            <!-- MP4 PRINCIPAL -->
             <video
                 id="mainVideo"
                 controls
@@ -601,24 +601,24 @@
             </video>
         </div>
 
-        <!-- ================= INFORMACIÓN ================= -->
+        <!-- INFORMACIÓN -->
         <div class="video-information">
             <span id="videoCategory">
                 ACTIVIDAD INSTITUCIONAL
             </span>
+
             <h3 id="videoTitle">
                 Actividades de nuestra institución
             </h3>
+
             <p id="videoDescription">
                 Conoce algunos de los momentos más importantes
                 de nuestra comunidad educativa.
             </p>
         </div>
 
-        <!-- ================= MINIATURAS ================= -->
+        <!-- MINIATURAS -->
         <div class="video-thumbnails">
-
-            <!-- ================= VIDEO MP4 ================= -->
 
             <button
                 class="video-thumb"
@@ -636,7 +636,6 @@
                 <span><i class="fa-solid fa-play"></i></span>
             </button>
 
-            <!-- ================= VIDEO MP4 ================= -->
             <button
                 class="video-thumb"
                 data-type="mp4"
@@ -649,10 +648,9 @@
                 <img
                     src="img/celular.png"
                     alt="Video sobre uso del celular">
+
                 <span><i class="fa-solid fa-play"></i></span>
             </button>
-
-            <!-- ================= VIDEO YOUTUBE ================= --> 
 
             <button
                 class="video-thumb"
@@ -665,24 +663,28 @@
                 <img
                     src="img/autolesion.png"
                     alt="Video de YouTube">
+
                 <span><i class="fa-solid fa-play"></i></span>
             </button>
 
-            
         </div>
     </div>
 </section>
 
 <!-- ================= COMENTARIOS ================= -->
-<section class="comentarios" id="comentarios">
+<section class="comentarios scroll-reveal" id="comentarios">
+
     <div class="section-title">
         <span>OPINIONES</span>
         <h2>Comentarios</h2>
     </div>
+
     <div class="comentario-carrusel">
+
         <button class="flecha-comentario izquierda" id="anterior">
             &#10094;
         </button>
+
         <div class="comentario-contenedor">
 
             <!-- COMENTARIO 1 -->
@@ -784,15 +786,19 @@
             </div>    
 
         </div>
+
         <button class="flecha-comentario derecha" id="siguiente">
             &#10095;
         </button>
+
     </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer class="footer">
+<footer class="footer scroll-reveal">
+
     <div class="footer-container">
+
         <div class="footer-brand">
             <div class="logo footer-logo">                
                 <div>
@@ -800,10 +806,12 @@
                     <span>Unidad Educativa</span>
                 </div>
             </div>
+
             <p>
                 Formando estudiantes con valores, conocimientos
                 y visión de futuro.
             </p>
+
             <div class="social">
                 <a href="#">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -812,6 +820,7 @@
                 <a href="#">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
+
                 <a href="https://chat.whatsapp.com/JDRxmie0LIS9l4tT2RMqUq?s=cl&p=a&ilr=1" target="_blank"> 
                     <i class="fa-brands fa-whatsapp"></i>                    
                 </a>
@@ -840,10 +849,12 @@
                 <i class="fa-solid fa-house"></i>
                 Av. Hermanos Pereira
             </p>            
+
             <p>
                 <i class="fa-solid fa-phone"></i>
                 69621569
             </p>
+
             <p>
                 <i class="fa-solid fa-location-dot"></i>
                 Betanzos - Potosí - Bolivia
@@ -852,20 +863,21 @@
     </div>
 
     <!-- MAPA -->
-        <div class="footer-mapa">
-            <h3>📍 Ubicación</h3>
+    <div class="footer-mapa">
+        <h3>📍 Ubicación</h3>
 
-            <iframe
-                src="https://www.google.com/maps?q=Colegio%20Juan%20Francisco%20Bohorquez%20Betanzos%20Potosi%20Bolivia&output=embed"
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
-        </div>
+        <iframe
+            src="https://www.google.com/maps?q=Colegio%20Juan%20Francisco%20Bohorquez%20Betanzos%20Potosi%20Bolivia&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
 
     <div class="footer-bottom">
         <p>
             © 2026 Unidad Educativa J.F.B. | JhonatanDM & LauraCC
         </p>
+
         <p>
             Proyecto Educativo 2026
         </p>
@@ -879,6 +891,36 @@
 
 <script type="module" src="script.js"></script>
 
+<!-- ================= SCROLL REVEAL ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const elementos = document.querySelectorAll(".scroll-reveal");
+
+    const observador = new IntersectionObserver((entradas, observer) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+
+                entrada.target.classList.add("visible");
+
+                observer.unobserve(entrada.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+
+});
+</script>
+
 </body>
 </html>
-
