@@ -675,6 +675,11 @@ select {
     font-weight: 800;
     letter-spacing: 1.5px;
 }
+.btn-inicio-secundario .fa-whatsapp {
+    font-size: 1.8em;
+    margin-right: 8px;
+    vertical-align: middle;
+}
 
 /* =====================================================
                  MISIÓN Y VISIÓN
