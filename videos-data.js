@@ -37,7 +37,7 @@ window.VIDEOS = [
         titulo: "Evitemos el uso excesivo del celular",
         categoria: "EDUCACIÓN",
         descripcion: "Reflexionemos sobre el uso responsable del celular y la importancia de mantener la atención durante nuestras actividades educativas.",
-        miniatura: "img/desfile.png"
+        miniatura: "img/DES.webp"
     },
     {
         src: "IqbOoPuduTI",
