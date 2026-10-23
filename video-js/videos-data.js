@@ -19,18 +19,18 @@
    ============================================================ */
 window.VIDEOS = [
     {
-        src: "Galeria videos/Bulling.mp4",
-        titulo: "Evitemos el Bullying",
-        categoria: "CONVIVENCIA ESCOLAR",
-        descripcion: "Reflexionemos sobre la importancia del respeto y la convivencia entre todos los miembros de nuestra comunidad educativa.",
-        miniatura: "img/bulling.webp"
+        src: "https://youtu.be/QmyS399mbGY?si=4-Y-czuniRlEokn7",
+        titulo: "Reflexion sobre la responsabilidad",
+        categoria: "reflexion",
+        descripcion: "Reflexionemos sobre la importancia del respeto y la responsabilidad.",
+        miniatura: "img/reflexion.webp"
     },
     {
-        src: "Galeria videos/celular.mp4",
-        titulo: "Evitemos el uso excesivo del celular",
-        categoria: "EDUCACIÓN",
-        descripcion: "Reflexionemos sobre el uso responsable del celular y la importancia de mantener la atención durante nuestras actividades educativas.",
-        miniatura: "img/celular.webp"
+        src: "galeria videos/valora.mp4",
+        titulo: "Valora a tus padres",
+        categoria: "REFLEXION",
+        descripcion: "Reflexionemos sobre el valor hacia los padres.",
+        miniatura: "img/padre.webp"
     },
     {
         src: "https://youtu.be/ttprRB8dVHE?si=9VCKUpL3sdQO7QfO",
