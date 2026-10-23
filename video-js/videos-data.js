@@ -25,13 +25,7 @@ window.VIDEOS = [
         descripcion: "Reflexionemos sobre la importancia del respeto y la responsabilidad.",
         miniatura: "img/reflexion.webp"
     },
-    {
-        src: "galeria videos/valora.mp4",
-        titulo: "Valora a tus padres",
-        categoria: "REFLEXION",
-        descripcion: "Reflexionemos sobre el valor hacia los padres.",
-        miniatura: "img/padre.webp"
-    },
+   
     {
         src: "https://youtu.be/ttprRB8dVHE?si=9VCKUpL3sdQO7QfO",
         titulo: "Evitemos el uso excesivo del celular",
@@ -39,6 +33,7 @@ window.VIDEOS = [
         descripcion: "Reflexionemos sobre el uso responsable del celular y la importancia de mantener la atención durante nuestras actividades educativas.",
         miniatura: "img/DES.webp"
     },
+    
     {
         src: "IqbOoPuduTI",
         titulo: "Consejos para prevenir la autolesión",
