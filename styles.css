@@ -1034,6 +1034,28 @@ select {
     color: #0a3d1e;
 }
 
+
+   .comunicados-mas {
+       text-align: center;
+       margin-top: 2rem;
+   }
+
+   .ver-mas-comunicados {
+       padding: 12px 28px;
+       border: 2px solid #b30000;
+       background: transparent;
+       color: #b30000;
+       font-weight: 600;
+       border-radius: 999px;
+       cursor: pointer;
+       transition: background 0.2s, color 0.2s;
+   }
+
+   .ver-mas-comunicados:hover {
+       background: #b30000;
+       color: #fff;
+   }
+
 /* =====================================================
              ESTUDIANTES DESTACADOS
 ===================================================== */
