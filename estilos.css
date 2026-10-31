@@ -1035,26 +1035,32 @@ select {
 }
 
 
-   .comunicados-mas {
-       text-align: center;
-       margin-top: 2rem;
-   }
+.comunicados-mas {
+    text-align: center;
+    margin-top: 35px;
+}
 
-   .ver-mas-comunicados {
-       padding: 12px 28px;
-       border: 2px solid #b30000;
-       background: transparent;
-       color: #b30000;
-       font-weight: 600;
-       border-radius: 999px;
-       cursor: pointer;
-       transition: background 0.2s, color 0.2s;
-   }
+.ver-mas-comunicados {
+    padding: 13px 30px;
+    border: 2px solid #54cc82;
+    border-radius: 999px;
+    background: transparent;
+    color: #72d99a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
 
-   .ver-mas-comunicados:hover {
-       background: #b30000;
-       color: #fff;
-   }
+.ver-mas-comunicados:hover {
+    background: #54cc82;
+    color: #031b0d;
+}
+
+.comunicados-anteriores {
+    margin-top: 25px;
+}
 
 /* =====================================================
              ESTUDIANTES DESTACADOS
