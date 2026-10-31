@@ -6,24 +6,24 @@
    MENÚ PARA CELULAR
 ===================================================== */
 
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
-if (menuBtn && nav) {
+const botonMenu = document.getElementById("botonMenu");
+const navegacion = document.getElementById("navegacion");
+if (botonMenu && navegacion) {
 
-    menuBtn.addEventListener("click", () => {
+    botonMenu.addEventListener("click", () => {
 
-        nav.classList.toggle("active");
+        navegacion.classList.toggle("activo");
 
     });
 
 
     /* CERRAR MENÚ AL SELECCIONAR UNA OPCIÓN */
 
-    nav.querySelectorAll("a").forEach(link => {
+    navegacion.querySelectorAll("a").forEach(enlace => {
 
-        link.addEventListener("click", () => {
+        enlace.addEventListener("click", () => {
 
-            nav.classList.remove("active");
+            navegacion.classList.remove("activo");
 
         });
 
@@ -34,22 +34,22 @@ if (menuBtn && nav) {
 /* =====================================================
    CERRAR MENÚ AL TOCAR FUERA
 ===================================================== */
-document.addEventListener("click", event => {
+document.addEventListener("click", evento => {
 
-    if (!menuBtn || !nav) return;
+    if (!botonMenu || !navegacion) return;
 
     const hizoClickEnMenu =
-        nav.contains(event.target);
+        navegacion.contains(evento.target);
 
     const hizoClickEnBoton =
-        menuBtn.contains(event.target);
+        botonMenu.contains(evento.target);
 
     if (
         !hizoClickEnMenu &&
         !hizoClickEnBoton
     ) {
 
-        nav.classList.remove("active");
+        navegacion.classList.remove("activo");
 
     }
 
@@ -58,9 +58,9 @@ document.addEventListener("click", event => {
 /* =====================================================
    CARRUSEL CON MOUSE Y DEDO
 ===================================================== */
-function activarCarrusel(slider) {
+function activarCarrusel(deslizador) {
 
-    if (!slider) return;
+    if (!deslizador) return;
 
 
     let presionado = false;
@@ -74,57 +74,57 @@ function activarCarrusel(slider) {
        MOUSE
     ================================================= */
 
-    slider.addEventListener("mousedown", event => {
+    deslizador.addEventListener("mousedown", evento => {
 
         presionado = true;
 
-        slider.classList.add("dragging");
+        deslizador.classList.add("arrastrando");
 
         inicioX =
-            event.pageX -
-            slider.offsetLeft;
+            evento.pageX -
+            deslizador.offsetLeft;
 
         desplazamientoInicial =
-            slider.scrollLeft;
+            deslizador.scrollLeft;
 
     });
 
 
-    slider.addEventListener("mouseleave", () => {
+    deslizador.addEventListener("mouseleave", () => {
 
         presionado = false;
 
-        slider.classList.remove("dragging");
+        deslizador.classList.remove("arrastrando");
 
     });
 
 
-    slider.addEventListener("mouseup", () => {
+    deslizador.addEventListener("mouseup", () => {
 
         presionado = false;
 
-        slider.classList.remove("dragging");
+        deslizador.classList.remove("arrastrando");
 
     });
 
 
-    slider.addEventListener("mousemove", event => {
+    deslizador.addEventListener("mousemove", evento => {
 
         if (!presionado) return;
 
-        event.preventDefault();
+        evento.preventDefault();
 
 
         const posicionActual =
-            event.pageX -
-            slider.offsetLeft;
+            evento.pageX -
+            deslizador.offsetLeft;
 
 
         const distancia =
             (posicionActual - inicioX) * 1.5;
 
 
-        slider.scrollLeft =
+        deslizador.scrollLeft =
             desplazamientoInicial -
             distancia;
 
@@ -137,12 +137,12 @@ function activarCarrusel(slider) {
 
     let inicioToque = 0;
 
-    slider.addEventListener(
+    deslizador.addEventListener(
         "touchstart",
-        event => {
+        evento => {
 
             inicioToque =
-                event.touches[0].clientX;
+                evento.touches[0].clientX;
 
         },
         {
@@ -151,12 +151,12 @@ function activarCarrusel(slider) {
     );
 
 
-    slider.addEventListener(
+    deslizador.addEventListener(
         "touchend",
-        event => {
+        evento => {
 
             const finalToque =
-                event.changedTouches[0].clientX;
+                evento.changedTouches[0].clientX;
 
 
             const distancia =
@@ -167,12 +167,12 @@ function activarCarrusel(slider) {
             if (Math.abs(distancia) > 50) {
 
                 const ancho =
-                    slider.clientWidth;
+                    deslizador.clientWidth;
 
 
                 if (distancia > 0) {
 
-                    slider.scrollBy({
+                    deslizador.scrollBy({
 
                         left: ancho,
 
@@ -182,7 +182,7 @@ function activarCarrusel(slider) {
 
                 } else {
 
-                    slider.scrollBy({
+                    deslizador.scrollBy({
 
                         left: -ancho,
 
@@ -205,22 +205,22 @@ function activarCarrusel(slider) {
 /* =====================================================
    ACTIVAR CARRUSEL DE FOTOS
 ===================================================== */
-const photoTrack =
-    document.getElementById("photoTrack");
-if (photoTrack) {
+const pistaFotos =
+    document.getElementById("pistaFotos");
+if (pistaFotos) {
 
-    activarCarrusel(photoTrack);
+    activarCarrusel(pistaFotos);
 
 }
 
 /* =====================================================
    ACTIVAR CARRUSEL DE VIDEOS
 ===================================================== */
-const videoTrack =
-    document.getElementById("videoTrack");
-if (videoTrack) {
+const pistaVideos =
+    document.getElementById("pistaVideos");
+if (pistaVideos) {
 
-    activarCarrusel(videoTrack);
+    activarCarrusel(pistaVideos);
 
 }
 
@@ -228,26 +228,26 @@ if (videoTrack) {
    BOTÓN VOLVER ARRIBA
 ===================================================== */
 
-const topBtn =
-    document.getElementById("topBtn");
-if (topBtn) {
+const botonArriba =
+    document.getElementById("botonArriba");
+if (botonArriba) {
 
     window.addEventListener("scroll", () => {
 
         if (window.scrollY > 500) {
 
-            topBtn.style.display = "flex";
+            botonArriba.style.display = "flex";
 
         } else {
 
-            topBtn.style.display = "none";
+            botonArriba.style.display = "none";
 
         }
 
     });
 
 
-    topBtn.addEventListener("click", () => {
+    botonArriba.addEventListener("click", () => {
 
         window.scrollTo({
 
@@ -266,32 +266,32 @@ if (topBtn) {
 ===================================================== */
 const elementosAnimados =
     document.querySelectorAll(
-        ".comunicado, .comunicado-card, .student-card, .news-card, .gallery-item, .video-item, .comentario-item, .comment"
+        ".comunicado, .tarjeta-comunicado, .tarjeta-estudiante, .tarjeta-noticia, .item-galeria, .item-video, .comentario-item, .comentario-caja"
     );
 if (
     elementosAnimados.length > 0 &&
     "IntersectionObserver" in window
 ) {
 
-    const observer =
+    const observador =
         new IntersectionObserver(
 
-            entries => {
+            entradas => {
 
-                entries.forEach(entry => {
+                entradas.forEach(entrada => {
 
                     if (
-                        entry.isIntersecting
+                        entrada.isIntersecting
                     ) {
 
-                        entry.target.style.opacity =
+                        entrada.target.style.opacity =
                             "1";
 
-                        entry.target.style.transform =
+                        entrada.target.style.transform =
                             "translateY(0)";
 
-                        observer.unobserve(
-                            entry.target
+                        observador.unobserve(
+                            entrada.target
                         );
 
                     }
@@ -318,7 +318,7 @@ if (
             "opacity .6s ease, transform .6s ease";
 
 
-        observer.observe(elemento);
+        observador.observe(elemento);
 
     });
 
@@ -401,10 +401,10 @@ if (modalComunicado) {
 
     modalComunicado.addEventListener(
         "click",
-        event => {
+        evento => {
 
             if (
-                event.target ===
+                evento.target ===
                 modalComunicado
             ) {
 
@@ -424,10 +424,10 @@ if (modalComunicado) {
 
 document.addEventListener(
     "keydown",
-    event => {
+    evento => {
 
         if (
-            event.key === "Escape"
+            evento.key === "Escape"
         ) {
 
             cerrarComunicado();
@@ -441,39 +441,39 @@ document.addEventListener(
    GALERÍA DE FOTOS
 ===================================================== */
 
-const photoButtons =
+const botonesFotos =
     document.querySelectorAll(
-        ".photo-thumb"
+        ".miniatura-foto"
     );
-const mainPhoto =
+const fotoPrincipal =
     document.getElementById(
-        "mainPhoto"
+        "fotoPrincipal"
     );
-const photoTitle =
+const tituloFoto =
     document.getElementById(
-        "photoTitle"
+        "tituloFoto"
     );
-const photoCategory =
+const categoriaFoto =
     document.getElementById(
-        "photoCategory"
+        "categoriaFoto"
     );
-const photoDescription =
+const descripcionFoto =
     document.getElementById(
-        "photoDescription"
+        "descripcionFoto"
     );
-photoButtons.forEach(button => {
+botonesFotos.forEach(boton => {
 
-    button.addEventListener(
+    boton.addEventListener(
         "click",
         () => {
 
 
             /* QUITAR ACTIVO */
 
-            photoButtons.forEach(btn => {
+            botonesFotos.forEach(otroBoton => {
 
-                btn.classList.remove(
-                    "active"
+                otroBoton.classList.remove(
+                    "activo"
                 );
 
             });
@@ -481,16 +481,16 @@ photoButtons.forEach(button => {
 
             /* ACTIVAR BOTÓN */
 
-            button.classList.add(
-                "active"
+            boton.classList.add(
+                "activo"
             );
 
 
             /* EFECTO DE CAMBIO */
 
-            if (mainPhoto) {
+            if (fotoPrincipal) {
 
-                mainPhoto.style.opacity =
+                fotoPrincipal.style.opacity =
                     "0";
 
             }
@@ -501,20 +501,20 @@ photoButtons.forEach(button => {
 
                 /* CAMBIAR IMAGEN */
 
-                if (mainPhoto) {
+                if (fotoPrincipal) {
 
-                    mainPhoto.src =
-                        button.dataset.image;
+                    fotoPrincipal.src =
+                        boton.dataset.imagen;
 
                 }
 
 
                 /* CAMBIAR TÍTULO */
 
-                if (photoTitle) {
+                if (tituloFoto) {
 
-                    photoTitle.textContent =
-                        button.dataset.title ||
+                    tituloFoto.textContent =
+                        boton.dataset.titulo ||
                         "";
 
                 }
@@ -522,10 +522,10 @@ photoButtons.forEach(button => {
 
                 /* CAMBIAR CATEGORÍA */
 
-                if (photoCategory) {
+                if (categoriaFoto) {
 
-                    photoCategory.textContent =
-                        button.dataset.category ||
+                    categoriaFoto.textContent =
+                        boton.dataset.categoria ||
                         "";
 
                 }
@@ -533,10 +533,10 @@ photoButtons.forEach(button => {
 
                 /* CAMBIAR DESCRIPCIÓN */
 
-                if (photoDescription) {
+                if (descripcionFoto) {
 
-                    photoDescription.textContent =
-                        button.dataset.description ||
+                    descripcionFoto.textContent =
+                        boton.dataset.descripcion ||
                         "";
 
                 }
@@ -544,9 +544,9 @@ photoButtons.forEach(button => {
 
                 /* MOSTRAR */
 
-                if (mainPhoto) {
+                if (fotoPrincipal) {
 
-                    mainPhoto.style.opacity =
+                    fotoPrincipal.style.opacity =
                         "1";
 
                 }
@@ -562,49 +562,49 @@ photoButtons.forEach(button => {
    GALERÍA DE VIDEOS
    MP4 + YOUTUBE
 ===================================================== */
-const videoMain =
+const videoPrincipal =
     document.getElementById(
-        "videoMain"
+        "videoPrincipal"
     );
-const videoTitle =
+const tituloVideo =
     document.getElementById(
-        "videoTitle"
+        "tituloVideo"
     );
-const videoCategory =
+const categoriaVideo =
     document.getElementById(
-        "videoCategory"
+        "categoriaVideo"
     );
-const videoDescription =
+const descripcionVideo =
     document.getElementById(
-        "videoDescription"
+        "descripcionVideo"
     );
-const videoButtons =
+const botonesVideos =
     document.querySelectorAll(
-        ".video-thumb"
+        ".miniatura-video"
     );
 
 /* =====================================================
    ACTUALIZAR INFORMACIÓN DEL VIDEO
 ===================================================== */
-function actualizarInformacionVideo(button) {
-    if (videoTitle) {
+function actualizarInformacionVideo(boton) {
+    if (tituloVideo) {
 
-        videoTitle.textContent =
-            button.dataset.title || "";
-
-    }
-
-    if (videoCategory) {
-
-        videoCategory.textContent =
-            button.dataset.category || "";
+        tituloVideo.textContent =
+            boton.dataset.titulo || "";
 
     }
 
-    if (videoDescription) {
+    if (categoriaVideo) {
 
-        videoDescription.textContent =
-            button.dataset.description || "";
+        categoriaVideo.textContent =
+            boton.dataset.categoria || "";
+
+    }
+
+    if (descripcionVideo) {
+
+        descripcionVideo.textContent =
+            boton.dataset.descripcion || "";
 
     }
 }
@@ -614,7 +614,7 @@ function actualizarInformacionVideo(button) {
 ===================================================== */
 function detenerVideoActual() {
 
-    if (!videoMain) return;
+    if (!videoPrincipal) return;
 
 
     /* =================================================
@@ -622,7 +622,7 @@ function detenerVideoActual() {
     ================================================= */
 
     const video =
-        videoMain.querySelector(
+        videoPrincipal.querySelector(
             "video"
         );
 
@@ -645,7 +645,7 @@ function detenerVideoActual() {
     ================================================= */
 
     const iframe =
-        videoMain.querySelector(
+        videoPrincipal.querySelector(
             "iframe"
         );
 
@@ -667,15 +667,15 @@ function detenerVideoActual() {
 /* =====================================================
    CARGAR VIDEO MP4
 ===================================================== */
-function cargarMP4(button) {
+function cargarMP4(boton) {
 
-    if (!videoMain) return;
+    if (!videoPrincipal) return;
 
     const video =
-        button.dataset.video;
+        boton.dataset.video;
 
-    const poster =
-        button.dataset.poster || "";
+    const portada =
+        boton.dataset.portada || "";
 
 
     /* DETENER ANTERIOR */
@@ -685,7 +685,7 @@ function cargarMP4(button) {
 
     /* LIMPIAR CONTENEDOR */
 
-    videoMain.innerHTML = "";
+    videoPrincipal.innerHTML = "";
 
 
     /* CREAR VIDEO */
@@ -697,7 +697,7 @@ function cargarMP4(button) {
 
 
     elementoVideo.id =
-        "mainVideo";
+        "videoReproductor";
 
     elementoVideo.controls =
         true;
@@ -711,37 +711,37 @@ function cargarMP4(button) {
 
     /* POSTER */
 
-    if (poster) {
+    if (portada) {
 
         elementoVideo.poster =
-            poster;
+            portada;
 
     }
 
 
     /* CREAR SOURCE */
 
-    const source =
+    const fuente =
         document.createElement(
             "source"
         );
 
 
-    source.src =
+    fuente.src =
         video;
 
-    source.type =
+    fuente.type =
         "video/mp4";
 
 
     elementoVideo.appendChild(
-        source
+        fuente
     );
 
 
     /* AGREGAR VIDEO */
 
-    videoMain.appendChild(
+    videoPrincipal.appendChild(
         elementoVideo
     );
 
@@ -777,17 +777,17 @@ function cargarMP4(button) {
 /* =====================================================
    CARGAR VIDEO DE YOUTUBE
 ===================================================== */
-function cargarYouTube(button) {
+function cargarYouTube(boton) {
 
-    if (!videoMain) return;
+    if (!videoPrincipal) return;
 
 
     /* =================================================
        OBTENER ID DEL VIDEO
     ================================================= */
 
-    let videoID =
-        (button.dataset.video || "").trim();
+    let idVideo =
+        (boton.dataset.video || "").trim();
 
 
     /* =================================================
@@ -795,17 +795,17 @@ function cargarYouTube(button) {
     ================================================= */
 
     if (
-        videoID.includes("youtube.com") ||
-        videoID.includes("youtu.be")
+        idVideo.includes("youtube.com") ||
+        idVideo.includes("youtu.be")
     ) {
 
         try {
 
             const url =
                 new URL(
-                    videoID.startsWith("http")
-                        ? videoID
-                        : "https://" + videoID
+                    idVideo.startsWith("http")
+                        ? idVideo
+                        : "https://" + idVideo
                 );
 
 
@@ -815,7 +815,7 @@ function cargarYouTube(button) {
                 url.searchParams.get("v")
             ) {
 
-                videoID =
+                idVideo =
                     url.searchParams.get("v");
 
             }
@@ -827,7 +827,7 @@ function cargarYouTube(button) {
                 url.hostname.includes("youtu.be")
             ) {
 
-                videoID =
+                idVideo =
                     url.pathname
                         .replace("/", "")
                         .split("/")[0];
@@ -841,7 +841,7 @@ function cargarYouTube(button) {
                 url.pathname.includes("/embed/")
             ) {
 
-                videoID =
+                idVideo =
                     url.pathname
                         .split("/embed/")[1]
                         .split("/")[0];
@@ -866,8 +866,8 @@ function cargarYouTube(button) {
        LIMPIAR ID
     ================================================= */
 
-    videoID =
-        videoID
+    idVideo =
+        idVideo
             .split("?")[0]
             .split("&")[0]
             .split("/")[0]
@@ -879,12 +879,12 @@ function cargarYouTube(button) {
     ================================================= */
 
     if (
-        !/^[a-zA-Z0-9_-]{11}$/.test(videoID)
+        !/^[a-zA-Z0-9_-]{11}$/.test(idVideo)
     ) {
 
         console.error(
             "ID de YouTube no válido:",
-            videoID
+            idVideo
         );
 
         return;
@@ -903,7 +903,7 @@ function cargarYouTube(button) {
        LIMPIAR CONTENEDOR
     ================================================= */
 
-    videoMain.innerHTML = "";
+    videoPrincipal.innerHTML = "";
 
 
     /* =================================================
@@ -915,7 +915,7 @@ function cargarYouTube(button) {
 
 
     iframe.id =
-        "mainYouTube";
+        "youtubePrincipal";
 
 
     /* =================================================
@@ -925,7 +925,7 @@ function cargarYouTube(button) {
 
     iframe.src =
         "https://www.youtube.com/embed/" +
-        encodeURIComponent(videoID) +
+        encodeURIComponent(idVideo) +
         "?rel=0";
 
 
@@ -934,7 +934,7 @@ function cargarYouTube(button) {
     ================================================= */
 
     iframe.title =
-        button.dataset.title ||
+        boton.dataset.titulo ||
         "Video de YouTube";
 
 
@@ -982,7 +982,7 @@ function cargarYouTube(button) {
        AGREGAR IFRAME
     ================================================= */
 
-    videoMain.appendChild(
+    videoPrincipal.appendChild(
         iframe
     );
 
@@ -991,9 +991,9 @@ function cargarYouTube(button) {
 /* =====================================================
    CLIC EN LOS VIDEOS
 ===================================================== */
-videoButtons.forEach(button => {
+botonesVideos.forEach(boton => {
 
-    button.addEventListener(
+    boton.addEventListener(
         "click",
         () => {
 
@@ -1001,10 +1001,10 @@ videoButtons.forEach(button => {
                QUITAR ACTIVO
             =============================== */
 
-            videoButtons.forEach(btn => {
+            botonesVideos.forEach(otroBoton => {
 
-                btn.classList.remove(
-                    "active"
+                otroBoton.classList.remove(
+                    "activo"
                 );
 
             });
@@ -1014,8 +1014,8 @@ videoButtons.forEach(button => {
                ACTIVAR ACTUAL
             =============================== */
 
-            button.classList.add(
-                "active"
+            boton.classList.add(
+                "activo"
             );
 
 
@@ -1024,7 +1024,7 @@ videoButtons.forEach(button => {
             =============================== */
 
             actualizarInformacionVideo(
-                button
+                boton
             );
 
 
@@ -1034,7 +1034,7 @@ videoButtons.forEach(button => {
 
             const tipo =
                 (
-                    button.dataset.type ||
+                    boton.dataset.tipo ||
                     "mp4"
                 ).toLowerCase();
 
@@ -1048,7 +1048,7 @@ videoButtons.forEach(button => {
             ) {
 
                 cargarYouTube(
-                    button
+                    boton
                 );
 
             }
@@ -1061,7 +1061,7 @@ videoButtons.forEach(button => {
             else {
 
                 cargarMP4(
-                    button
+                    boton
                 );
 
             }
@@ -1255,11 +1255,11 @@ window.addEventListener(
 
         if (
             window.innerWidth > 700 &&
-            nav
+            navegacion
         ) {
 
-            nav.classList.remove(
-                "active"
+            navegacion.classList.remove(
+                "activo"
             );
 
         }
@@ -1272,15 +1272,15 @@ window.addEventListener(
 ===================================================== */
 document
     .querySelectorAll(
-        ".photo-thumb img, .video-thumb img"
+        ".miniatura-foto img, .miniatura-video img"
     )
     .forEach(img => {
 
         img.addEventListener(
             "dragstart",
-            event => {
+            evento => {
 
-                event.preventDefault();
+                evento.preventDefault();
 
             }
 

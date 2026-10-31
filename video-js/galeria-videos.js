@@ -8,22 +8,22 @@
 
     const lista = window.VIDEOS || [];
 
-    const videoMain =
-        document.getElementById("videoMain");
+    const videoPrincipal =
+        document.getElementById("videoPrincipal");
 
-    const videoTitle =
-        document.getElementById("videoTitle");
+    const tituloVideo =
+        document.getElementById("tituloVideo");
 
-    const videoCategory =
-        document.getElementById("videoCategory");
+    const categoriaVideo =
+        document.getElementById("categoriaVideo");
 
-    const videoDescription =
-        document.getElementById("videoDescription");
+    const descripcionVideo =
+        document.getElementById("descripcionVideo");
 
     const contenedorMiniaturas =
-        document.querySelector("#videos .video-thumbnails");
+        document.querySelector("#videos .miniaturas-videos");
 
-    if (!videoMain || !contenedorMiniaturas || !lista.length) return;
+    if (!videoPrincipal || !contenedorMiniaturas || !lista.length) return;
 
     /* Quita las miniaturas antiguas escritas a mano en el HTML */
     contenedorMiniaturas.innerHTML = "";
@@ -32,8 +32,8 @@
     const estilo = document.createElement("style");
 
     estilo.textContent =
-        ".video-main.es-vertical{aspect-ratio:9/16;height:80vh;width:auto;max-width:100%;margin-inline:auto}" +
-        ".video-thumb video{width:100%;height:100%;object-fit:cover;display:block}";
+        ".video-principal.es-vertical{aspect-ratio:9/16;height:80vh;width:auto;max-width:100%;margin-inline:auto}" +
+        ".miniatura-video video{width:100%;height:100%;object-fit:cover;display:block}";
 
     document.head.appendChild(estilo);
 
@@ -124,7 +124,7 @@
 
     function detenerVideoActual() {
 
-        const video = videoMain.querySelector("video");
+        const video = videoPrincipal.querySelector("video");
 
         if (video) {
 
@@ -134,7 +134,7 @@
 
         }
 
-        const iframe = videoMain.querySelector("iframe");
+        const iframe = videoPrincipal.querySelector("iframe");
 
         if (iframe) {
 
@@ -153,9 +153,9 @@
 
         detenerVideoActual();
 
-        videoMain.innerHTML = "";
+        videoPrincipal.innerHTML = "";
 
-        videoMain.classList.toggle("es-vertical", !!v.vertical);
+        videoPrincipal.classList.toggle("es-vertical", !!v.vertical);
 
 
         if (v.tipo === "archivo") {
@@ -164,7 +164,7 @@
 
             const elementoVideo = document.createElement("video");
 
-            elementoVideo.id = "mainVideo";
+            elementoVideo.id = "videoReproductor";
             elementoVideo.controls = true;
             elementoVideo.playsInline = true;
             elementoVideo.preload = "metadata";
@@ -173,14 +173,14 @@
                 elementoVideo.poster = v.miniatura;
             }
 
-            const source = document.createElement("source");
+            const fuente = document.createElement("source");
 
-            source.src = encodeURI(v.src);
-            source.type = "video/mp4";
+            fuente.src = encodeURI(v.src);
+            fuente.type = "video/mp4";
 
-            elementoVideo.appendChild(source);
+            elementoVideo.appendChild(fuente);
 
-            videoMain.appendChild(elementoVideo);
+            videoPrincipal.appendChild(elementoVideo);
 
             elementoVideo.load();
 
@@ -196,7 +196,7 @@
 
             const iframe = document.createElement("iframe");
 
-            iframe.id = "mainYouTube";
+            iframe.id = "youtubePrincipal";
             iframe.src = v.embed;
             iframe.title = v.titulo || "Video";
 
@@ -214,23 +214,23 @@
 
             iframe.setAttribute("allowfullscreen", "");
 
-            videoMain.appendChild(iframe);
+            videoPrincipal.appendChild(iframe);
 
         }
 
 
         /* INFORMACIÓN */
 
-        if (videoTitle) videoTitle.textContent = v.titulo || "";
-        if (videoCategory) videoCategory.textContent = v.categoria || "";
-        if (videoDescription) videoDescription.textContent = v.descripcion || "";
+        if (tituloVideo) tituloVideo.textContent = v.titulo || "";
+        if (categoriaVideo) categoriaVideo.textContent = v.categoria || "";
+        if (descripcionVideo) descripcionVideo.textContent = v.descripcion || "";
 
 
         /* BOTÓN ACTIVO */
 
         contenedorMiniaturas
-            .querySelectorAll(".video-thumb")
-            .forEach(btn => btn.classList.toggle("active", btn === boton));
+            .querySelectorAll(".miniatura-video")
+            .forEach(otroBoton => otroBoton.classList.toggle("activo", otroBoton === boton));
 
     }
 
