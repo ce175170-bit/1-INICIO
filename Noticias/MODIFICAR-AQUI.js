@@ -6,6 +6,22 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
+        fecha: "02 de noviembre de 2026",
+        titulo: "Los bachilleres no acabarán el año antes que el resto de los niveles",
+        resumen: "A diferencia de otros años, los estudiantes de sexto curso de secundaria ya no tendrán un adelanto de evaluaciones finales, por lo que pasarán clases como el resto de los cursos hasta inicios de diciembre. Mientras tanto, desde la Dirección Departamental de Educación...",
+        imagen: "Noticias/noti6.jpg",
+        enlace: "https://elpotosi.net/local/20261101_los-bachilleres-no-acabaran-el-ano-antes-que-el-resto-de-los-niveles.html"
+    },
+
+    {
+        fecha: "02 de noviembre de 2026",
+        titulo: " ¡Potosí celebra 216 años de libertad este 10 de noviembre!",
+        resumen: "​Entérate de todas las actividades oficiales por el aniversario de la Gesta Libertaria del 10 de Noviembre.​📲 Escanea el QR de la imagen y  descarga el cronograma de actividades.",
+        imagen: "Noticias/noti7.jpg",
+        enlace: "https://www.facebook.com/share/p/1Dxf2WPzyT/"
+    },
+
+    {
         fecha: "31 de octubre de 2026",
         titulo: "𝗣𝗥𝗢𝗚𝗥𝗔𝗠𝗔 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗘𝗡 𝗛𝗢𝗠𝗘𝗡𝗔𝗝𝗘 𝗔 𝗟𝗢𝗦 101 𝗔Ñ𝗢𝗦 𝗗𝗘 𝗕𝗘𝗧𝗔𝗡𝗭𝗢𝗦",
         resumen: "El Gobierno Autónomo Municipal de Betanzos, a la cabeza del alcalde Dr. Julio Arturo Caba Quicho, junto al pleno del Concejo Municipal, hace público el programa general en homenaje a los 101 años del municipio de Betanzos",
