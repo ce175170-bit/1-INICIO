@@ -5,8 +5,7 @@ window.COMUNICADOS_CONFIG = {
 
 window.COMUNICADOS = [
 
-    
-
+         
     {
         etiqueta: "INVITACION",
         titulo: "DEMOSTRACIÓN DE BANDAS",

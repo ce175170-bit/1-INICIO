@@ -20,6 +20,7 @@ window.FOTOS = [
         categoria: "",
         descripcion: ""
     },
+    
 
     {
         imagen: "Galeria fotos/ago3.webp",
