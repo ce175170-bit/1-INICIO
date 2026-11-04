@@ -6,6 +6,30 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
+        fecha: "03 de noviembre de 2026",
+        titulo: "Precios actuales de la canasta familiar en Betanzos",
+        resumen: "Los costos de la canasta familiar y las tarifas de transporte fueron socializados y acordados con representantes de los sindicatos y organizaciones sociales, quienes participaron en diversas reuniones junto a las autoridades municipales, el Comité Cívico, la FEJUVE y los presidentes de barrio.",
+        imagen: "Noticias/noti8.jpg",
+        enlace: "https://www.facebook.com/share/p/1CFKapVf5f/"
+    },
+
+    {
+        fecha: "03 de noviembre de 2026",
+        titulo: "Alta demanda: ya hay cronograma para la preinscripción 2027",
+        resumen: "Se acerca el cierre del año escolar y desde el Ministerio de Educación ya se ha establecido un cronograma para la preinscripción en unidades educativas de alta demanda que inicia la próxima semana con el registro de las escuelas y terminará en enero de 2027.",
+        imagen: "Noticias/noti9.jpg",
+        enlace: "https://elpotosi.net/local/20261103_alta-demanda-ya-hay-cronograma-para-la-preinscripcion-2027.html"
+    },
+
+     {
+        fecha: "03 de noviembre de 2026",
+        titulo: "Fallece el cantautor potosino Luis Rico",
+        resumen: "Fue uno de los cantautores y compositores de canción social y de protesta más influyentes de Bolivia. Nació el 15 de mayo de 1945 en Tupiza, Potosí, y dedicó más de 50 años a retratar la historia",
+        imagen: "Noticias/noti10.jpg",
+        enlace: "https://correodelsur.com/cultura/20261103/fallece-el-cantautor-luis-rico.html"
+    },
+
+    {
         fecha: "02 de noviembre de 2026",
         titulo: "Los bachilleres no acabarán el año antes que el resto de los niveles",
         resumen: "A diferencia de otros años, los estudiantes de sexto curso de secundaria ya no tendrán un adelanto de evaluaciones finales, por lo que pasarán clases como el resto de los cursos hasta inicios de diciembre. Mientras tanto, desde la Dirección Departamental de Educación...",
