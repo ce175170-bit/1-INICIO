@@ -5,6 +5,15 @@ window.COMUNICADOS_CONFIG = {
 
 window.COMUNICADOS = [
 
+      {
+        etiqueta: "COMUNICADO",
+        titulo: "LAS CLASES SON NORMALES",
+        fecha: "5 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/comunicado7.png",
+        descripcion: "los estudiantes deben tomar en cuenta"
+    },   
+    
+
          
     {
         etiqueta: "INVITACION",
