@@ -6,6 +6,31 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
+        fecha: "06 de noviembre de 2026",
+        titulo: "Campeonato estudiantil de futsal del nivel secundario en Betanzos",
+        resumen: "En conmemoración de un aniversario más de Betanzos como capital de la provincia Cornelio Saavedra, se lanza la presente convocatoria con el objetivo de promover el deporte en nuestro municipio",
+        imagen: "Noticias/noti11.jpg",
+        enlace: "https://www.facebook.com/share/p/1EmukM4ya2/"
+    },
+
+    {
+        fecha: "06 de noviembre de 2026",
+        titulo: "Senamhi prevé lluvias aisladas en el Departamento de Potosí",
+        resumen: "Pese a que los efectos del fenómeno “El Niño” comenzaron a golpear de manera contundente a las cuatro regiones del Departamento de Potosí, que soportan una drástica disminución de precipitaciones pluviales",
+        imagen: "Noticias/noti12.jpg",
+        enlace: "https://elpotosi.net/local/20261106_senamhi-preve-lluvias-aisladas-en-el-departamento-de-potosi.html"
+    },
+
+    {
+        fecha: "06 de noviembre de 2026",
+        titulo: "Magisterio urbano anuncia más piquetes y protestas",
+        resumen: "La Federación de Trabajadores en Educación Urbana de Potosí mantiene sus medidas de presión. Este viernes tiene prevista la crucifixión de educadores en demanda de que las autoridades gubernamentales escuchen su demanda.",
+        imagen: "Noticias/noti13.jpg",
+        enlace: "https://elpotosi.net/local/20261106_magisterio-urbano-anuncia-mas-piquetes-y-protestas.html"
+    },
+
+
+    {
         fecha: "03 de noviembre de 2026",
         titulo: "Precios actuales de la canasta familiar en Betanzos",
         resumen: "Los costos de la canasta familiar y las tarifas de transporte fueron socializados y acordados con representantes de los sindicatos y organizaciones sociales, quienes participaron en diversas reuniones junto a las autoridades municipales, el Comité Cívico, la FEJUVE y los presidentes de barrio.",
@@ -27,47 +52,7 @@ window.NOTICIAS = [
         resumen: "Fue uno de los cantautores y compositores de canción social y de protesta más influyentes de Bolivia. Nació el 15 de mayo de 1945 en Tupiza, Potosí, y dedicó más de 50 años a retratar la historia",
         imagen: "Noticias/noti10.jpg",
         enlace: "https://correodelsur.com/cultura/20261103/fallece-el-cantautor-luis-rico.html"
-    },
-
-    {
-        fecha: "02 de noviembre de 2026",
-        titulo: "Los bachilleres no acabarán el año antes que el resto de los niveles",
-        resumen: "A diferencia de otros años, los estudiantes de sexto curso de secundaria ya no tendrán un adelanto de evaluaciones finales, por lo que pasarán clases como el resto de los cursos hasta inicios de diciembre. Mientras tanto, desde la Dirección Departamental de Educación...",
-        imagen: "Noticias/noti6.jpg",
-        enlace: "https://elpotosi.net/local/20261101_los-bachilleres-no-acabaran-el-ano-antes-que-el-resto-de-los-niveles.html"
-    },
-
-    {
-        fecha: "02 de noviembre de 2026",
-        titulo: " ¡Potosí celebra 216 años de libertad este 10 de noviembre!",
-        resumen: "​Entérate de todas las actividades oficiales por el aniversario de la Gesta Libertaria del 10 de Noviembre.​📲 Escanea el QR de la imagen y  descarga el cronograma de actividades.",
-        imagen: "Noticias/noti7.jpg",
-        enlace: "https://www.facebook.com/share/p/1Dxf2WPzyT/"
-    },
-
-    {
-        fecha: "31 de octubre de 2026",
-        titulo: "𝗣𝗥𝗢𝗚𝗥𝗔𝗠𝗔 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗘𝗡 𝗛𝗢𝗠𝗘𝗡𝗔𝗝𝗘 𝗔 𝗟𝗢𝗦 101 𝗔Ñ𝗢𝗦 𝗗𝗘 𝗕𝗘𝗧𝗔𝗡𝗭𝗢𝗦",
-        resumen: "El Gobierno Autónomo Municipal de Betanzos, a la cabeza del alcalde Dr. Julio Arturo Caba Quicho, junto al pleno del Concejo Municipal, hace público el programa general en homenaje a los 101 años del municipio de Betanzos",
-        imagen: "Noticias/noti4.jpg",
-        enlace: "https://www.facebook.com/share/p/1EbEuU3pwZ/"
-    },
-
-    {
-        fecha: "31 de octubre de 2026",
-        titulo: "Aplicarán calendario regionalizado para el cierre del año escolar",
-        resumen: "Esta gestión se aplicará un calendario escolar regionalizado, lo que implica que algunos distritos escolares terminarán de pasar clases en una fecha diferente a otros",
-        imagen: "Noticias/noti5.jpg",
-        enlace: "https://elpotosi.net/local/20261030_aplicaran-calendario-regionalizado-para-el-cierre-del-ano-escolar.html"
-    },
-
-    {
-        fecha: "26 de octubre de 2026",
-        titulo: "Betanzos tiene el privilegio de contar con una ex-seleccionada del fútbol boliviano.",
-        resumen: "Sonia Torihuano Flores, ex-seleccionada del fútbol y fútbol de salón boliviano, es la jugadora del magisterio urbano betanceño que descolló en los juegos interprovinciales de Toro Toro",
-        imagen: "Noticias/noti2.jpg",
-        enlace: "https://www.facebook.com/share/p/1FAjFYcD1h/"
-    },
+    },     
 
     {
         fecha: "26 de octubre de 2026",
