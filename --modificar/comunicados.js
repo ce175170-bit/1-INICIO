@@ -5,7 +5,15 @@ window.COMUNICADOS_CONFIG = {
 
 window.COMUNICADOS = [
 
-      {
+    {
+        etiqueta: "INVITACION",
+        titulo: "Campeonato de futsal del nivel secundario en Betanzos",
+        fecha: "6 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/comunicado11.jpg",
+        descripcion: "Nuestro equipo del colegio JFB jugará mañana sábado 7 de noviembre en la cancha de la U.E. Cornelio Saavedra y todos están invitados a venir a apoyarlo. ¡Te esperamos en las gradas, vamos JFB!"
+    },   
+
+    {
         etiqueta: "COMUNICADO",
         titulo: "LAS CLASES SON NORMALES",
         fecha: "5 DE NOVIEMBRE DE 2026",
