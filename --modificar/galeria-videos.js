@@ -1,6 +1,23 @@
 
 window.VIDEOS = [ 
 
+    {
+        src: "https://youtube.com/shorts/C1sjJBA9c74?si=UgG8WNFss1kn9HOm",
+        titulo: "Titulo de bachiller digital",
+        categoria: "Aviso",
+        descripcion: "Si eres estudiante de Bolivia y te gradúas de bachiller este 2026 mira este video.",
+        miniatura: "img/registro.png"
+    },
+
+    
+    {
+        src: "https://www.facebook.com/reel/1787971019102462",
+        titulo: "Titulo de bachiller digital",
+        categoria: "Aviso",
+        descripcion: "Seguridad para obtener tu bachiller digital, no compartas tus datos con nadie.",
+        miniatura: "img/titulo.png"
+    },
+
     
     {
         src: "https://youtu.be/QmyS399mbGY?si=4-Y-czuniRlEokn7",
