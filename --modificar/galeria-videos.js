@@ -8,7 +8,6 @@ window.VIDEOS = [
         descripcion: "Si eres estudiante de Bolivia y te gradúas de bachiller este 2026 mira este video.",
         miniatura: "img/registro.png"
     },
-
     
     {
         src: "https://www.facebook.com/reel/1787971019102462",
@@ -17,7 +16,6 @@ window.VIDEOS = [
         descripcion: "Seguridad para obtener tu bachiller digital, no compartas tus datos con nadie.",
         miniatura: "img/titulo.png"
     },
-
     
     {
         src: "https://youtu.be/QmyS399mbGY?si=4-Y-czuniRlEokn7",

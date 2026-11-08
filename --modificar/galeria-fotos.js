@@ -4,6 +4,31 @@ window.FOTOS = [
 
     /* ---------- DEMOSTRACIÓN DE BANDAS ---------- */
     {
+        imagen: "Galeria fotos/des-porta.jpg",
+        titulo: "Desfile Civico en honor al aniversario del municipio de Betanzos",
+        categoria: "ANIVERSARIO DEL MUNICIPIO DE BETANZOS 2026",
+        descripcion: "Nuestro colegio J.F.B. fue parte del desfile"
+    },
+    { imagen: "Galeria fotos/des-porta.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des1.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des2.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des3.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des4.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des5.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des6.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des7.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des8.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des9.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des10.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des11.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des12.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des13.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des14.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des15.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/des16.jpg", titulo: "", categoria: "", descripcion: "" },
+
+    {
         imagen: "Galeria fotos/banda1.jpg",
         titulo: "Demostracion de bandas",
         categoria: "ANIVERSARIO DEL MUNICIPIO DE BETANZOS 2026",

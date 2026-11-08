@@ -1625,6 +1625,96 @@ body.visor-abierto { overflow: hidden; }
     outline: 3px solid #0a3d1e;
 }
 
+/* ---------- Celular: fila que se desliza con el dedo ---------- */
+#videos .miniaturas-videos {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 2px 14px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,.35) transparent;
+}
+
+#videos .video-thumb {
+    position: relative;
+    flex: 0 0 auto;
+    width: 165px;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    scroll-snap-align: start;
+    touch-action: manipulation;
+    box-shadow: 0 4px 12px rgba(0,0,0,.35);
+    outline: 3px solid transparent;
+    transition: transform .2s ease, outline-color .2s ease;
+}
+
+#videos .video-thumb:hover {
+    transform: translateY(-3px);
+}
+
+#videos .video-thumb:focus-visible,
+#videos .video-thumb.activo {
+    outline-color: #72d99a;
+}
+
+/* Portada */
+#videos .video-thumb img,
+#videos .video-thumb video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+#videos .video-thumb:hover img {
+    transform: scale(1.06);
+}
+
+/* Sombra suave abajo para que el botón de play destaque */
+#videos .video-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.45), transparent 60%);
+    pointer-events: none;
+}
+
+/* Botón de play centrado */
+#videos .video-thumb span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.7);
+    border: 2px solid rgba(255,255,255,.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 2px;          /* centra visualmente el triángulo */
+    pointer-events: none;
+    transition: background .2s ease, transform .2s ease;
+}
+
+#videos .video-thumb:hover span {
+    background: rgba(10,61,30,.95);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
 /* =====================================================
                     COMENTARIOS
 ===================================================== */
@@ -3085,6 +3175,83 @@ body.visor-abierto { overflow: hidden; }
 
     .visor-galeria { padding: 64px 10px 90px; }
 }
+
+
+/* ---------- galeria de videos ---------- */
+@media (min-width: 769px) {
+
+    #videos .miniaturas-videos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        overflow: visible;
+        padding: 0;
+    }
+
+    #videos .video-thumb {
+        width: 100%;
+    }
+
+    #videos .video-thumb span {
+        width: 48px;
+        height: 48px;
+        font-size: 17px;
+    }
+}
+
+/* =====================================================
+   REPRODUCTOR AL CENTRO 
+===================================================== */
+@media (min-width: 769px) {
+
+    /* Una sola columna centrada: reproductor, información y miniaturas */
+    #videos .galeria-videos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        max-width: 850px;
+        margin: 40px auto 0;
+    }
+
+    /* Reproductor centrado, proporción 16:9 */
+    #videos .video-principal {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+    }
+
+    #videos .video-principal video,
+    #videos .video-principal iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Videos verticales (TikTok, Reels, Shorts): más angostos, centrados */
+    #videos .video-principal.es-vertical {
+        width: auto;
+        height: 75vh;
+        max-width: 100%;
+        aspect-ratio: 9 / 16;
+        margin-inline: auto;
+    }
+
+    /* Información debajo del reproductor (si la usas) */
+    #videos .informacion-video {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    /* Miniaturas con el mismo ancho que el reproductor */
+    #videos .miniaturas-videos {
+        width: 100%;
+    }
+}
+
 
 
 
