@@ -1,6 +1,49 @@
 
 window.FOTOS = [
     
+    {
+        imagen: "Galeria fotos/banda1.jpg",
+        titulo: "Demostracion de bandas",
+        categoria: "ANIVERSARIO DEL MUNICIPIO DE BETANZOS 2026",
+        descripcion: "Nuestro colegio J.F.B. fue parte de la demostracion de bandas"
+    },
+    {
+        imagen: "Galeria fotos/banda2.jpg",
+        titulo: "",
+        categoria: "",
+        descripcion: ""
+    },
+    {
+        imagen: "Galeria fotos/banda3.jpg",
+        titulo: "",
+        categoria: "",
+        descripcion: ""
+    },
+    {
+        imagen: "Galeria fotos/banda4.jpg",
+        titulo: "",
+        categoria: "",
+        descripcion: ""
+    },
+    {
+        imagen: "Galeria fotos/banda5.jpg",
+        titulo: "",
+        categoria: "",
+        descripcion: ""
+    },
+    {
+        imagen: "Galeria fotos/banda6.jpg",
+        titulo: "",
+        categoria: "",
+        descripcion: ""
+    },
+    {
+        imagen: "Galeria fotos/banda7.jpg",
+        titulo: "",
+        categoria: "",
+        descripcion: ""
+    },
+    
 
 
     {
