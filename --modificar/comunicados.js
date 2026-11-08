@@ -6,6 +6,14 @@ window.COMUNICADOS_CONFIG = {
 window.COMUNICADOS = [
 
     {
+        etiqueta: "COMUNICADO",
+        titulo: "Actividad escolar para el dia lunes",
+        fecha: "8 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/comunicado11.png",
+        descripcion: "Todos los estudiantes deben tomar en cuenta al siguiente comunicado."
+    },   
+
+    {
         etiqueta: "INVITACION",
         titulo: "Campeonato de futsal del nivel secundario en Betanzos",
         fecha: "6 DE NOVIEMBRE DE 2026",

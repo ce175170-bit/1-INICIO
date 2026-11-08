@@ -1,69 +1,62 @@
 
 window.FOTOS = [
+    
+
+
     {
         imagen: "Galeria fotos/ago.webp",
         titulo: "Desfile, 6 de agosto de 2026",
         categoria: "ANIVERSARIO DE BOLIVIA",
         descripcion: "Actividades y experiencias compartidas por nuestra comunidad educativa."
     },
-
     {
         imagen: "Galeria fotos/ago1.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago2.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-    
-
     {
         imagen: "Galeria fotos/ago3.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago4.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago5.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago6.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago7.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago8.webp",
         titulo: "",
         categoria: "",
         descripcion: ""
     },
-
     {
         imagen: "Galeria fotos/ago9.webp",
         titulo: "",

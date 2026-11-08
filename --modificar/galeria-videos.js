@@ -1,5 +1,7 @@
 
-window.VIDEOS = [
+window.VIDEOS = [ 
+
+    
     {
         src: "https://youtu.be/QmyS399mbGY?si=4-Y-czuniRlEokn7",
         titulo: "Reflexion sobre la responsabilidad",
