@@ -627,180 +627,40 @@
 </section>
 
 <!-- ================= 7° SECCION GALERÍA DE FOTOS ================= -->
-<section
-    class="seccion-multimedia aparecer-scroll"
-    id="fotos">
+<section 
+    class="seccion-multimedia aparecer-scroll" id="fotos">
     <div class="titulo-seccion">
-        <span>
-            NUESTRA HISTORIA
-        </span>
-        <h2>
-            Galería de fotos
-        </h2>
-        <p>
-            Conoce los momentos más importantes y especiales
-            de nuestra comunidad educativa.
-        </p>
+        <span>NUESTRA HISTORIA</span>
+        <h2>Galería de fotos</h2>
+        <p>Conoce los momentos más importantes y especiales de nuestra comunidad educativa.</p>
     </div>
+
     <div class="galeria-fotos">
 
+        <!-- FOTO PRINCIPAL (clic / toque = ampliar) -->
+        <div class="foto-principal" role="button" tabindex="0" aria-label="Ampliar foto">
+            <img id="fotoPrincipal" src="Galeria fotos/banda1.jpg" alt="Actividad educativa" fetchpriority="high" decoding="async">
 
-        <div class="foto-principal">
+            <span class="foto-contador" id="contadorFoto">1 / 1</span>
+            <span class="foto-ampliar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <em>Ampliar</em>
+            </span>
 
-            <img
-                id="fotoPrincipal"
-                src="Galeria fotos/ago.webp"
-                alt="Actividad educativa"
-                fetchpriority="high"
-                decoding="async">
+            <button class="flecha-foto flecha-prev" type="button" aria-label="Foto anterior">&#10094;</button>
+            <button class="flecha-foto flecha-next" type="button" aria-label="Foto siguiente">&#10095;</button>
+
             <div class="superposicion-foto">
                 <div>
-                    <span id="categoriaFoto">
-                        ANIVERSARIO DE BOLIVIA
-                    </span>
-                    <h3 id="tituloFoto">
-                        Desfile, 6 de agosto de 2026
-                    </h3>
-                    <p id="descripcionFoto">
-                        <strong>
-                            Actividades y experiencias compartidas
-                            por nuestra comunidad educativa.
-                        </strong>
-                    </p>
+                    <span id="categoriaFoto"></span>
+                    <h3 id="tituloFoto"></h3>
+                    <p id="descripcionFoto"></p>
                 </div>
             </div>
         </div>
 
-        <div class="miniaturas-fotos">
-
-            <button
-                class="miniatura-foto activo"
-                type="button"
-                data-imagen="Galeria fotos/ago1.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago1.webp"
-                    alt="Foto 1"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago2.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago2.webp"
-                    alt="Foto 2"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago3.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago3.webp"
-                    alt="Foto 3"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago4.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago4.webp"
-                    alt="Foto 4"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago5.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago5.webp"
-                    alt="Foto 5"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago6.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago6.webp"
-                    alt="Foto 6"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago7.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago7.webp"
-                    alt="Foto 7"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago8.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago8.webp"
-                    alt="Foto 8"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-            <button
-                class="miniatura-foto"
-                type="button"
-                data-imagen="Galeria fotos/ago9.webp"
-                data-titulo=""
-                data-categoria=""
-                data-descripcion="">
-                <img
-                    src="Galeria fotos/ago9.webp"
-                    alt="Foto 9"
-                    loading="lazy"
-                    decoding="async">
-            </button>
-
-        </div>
+        <!-- MINIATURAS: las crea galeria.js desde editar-fotos.js -->
+        <div class="miniaturas-fotos"></div>
     </div>
 </section>
 

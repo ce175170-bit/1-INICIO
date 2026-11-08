@@ -1195,12 +1195,9 @@ select {
 .seccion-multimedia {
     padding: 90px 7%;
     background:
-        linear-gradient(
-            145deg,
-            #080d0a,
-            #101913,
-            #060a08
-        );
+        radial-gradient(ellipse at 15% 0%, rgba(84,204,130,.10), transparent 55%),
+        radial-gradient(ellipse at 90% 100%, rgba(84,204,130,.07), transparent 50%),
+        linear-gradient(145deg, #080d0a, #101913, #060a08);
 }
 
 .galeria-fotos {
@@ -1208,23 +1205,37 @@ select {
     margin: auto;
 }
 
+/* ---------- Foto principal ---------- */
 .foto-principal {
     position: relative;
     width: 100%;
-    height: 560px;
+    height: 580px;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 22px;
     background: #030504;
-    border: 1px solid rgba(120,184,146,.12);
-    box-shadow: 0 25px 60px rgba(0,0,0,.55);
+    border: 1px solid rgba(120,184,146,.18);
+    box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 0 6px rgba(255,255,255,.015);
+    cursor: zoom-in;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.foto-principal:focus-visible {
+    border-color: #54cc82;
+    box-shadow: 0 0 0 3px rgba(84,204,130,.45);
 }
 
 .foto-principal img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     background: #020403;
-    transition: opacity .3s ease;
+    transition: opacity .35s ease, transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+
+.foto-principal:hover img {
+    transform: scale(1.04);
 }
 
 .superposicion-foto {
@@ -1232,18 +1243,18 @@ select {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 100px 40px 35px;
+    padding: 110px 45px 34px;
     color: white;
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.92),
-            rgba(0,0,0,.55),
-            transparent
-        );
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0,0,0,.92), rgba(0,0,0,.5) 55%, transparent);
 }
 
 .superposicion-foto span {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 30px;
+    background: rgba(84,204,130,.15);
+    border: 1px solid rgba(84,204,130,.4);
     color: #72d99a;
     font-size: 10px;
     font-weight: 800;
@@ -1251,47 +1262,116 @@ select {
 }
 
 .superposicion-foto h3 {
-    margin: 7px 0;
+    margin: 12px 0 6px;
     color: white;
-    font-size: 28px;
+    font-size: 30px;
+    line-height: 1.2;
 }
 
 .superposicion-foto p {
     max-width: 650px;
+    margin: 0;
     color: #d1dbd5;
-    font-size: 13px;
+    font-size: 13.5px;
 }
 
+/* Contador y botón ampliar */
+.foto-contador,
+.foto-ampliar {
+    position: absolute;
+    top: 20px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: 30px;
+    background: rgba(8,13,10,.55);
+    border: 1px solid rgba(255,255,255,.14);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.foto-contador { left: 20px; }
+.foto-ampliar  { right: 20px; transition: .3s; }
+.foto-ampliar em { font-style: normal; }
+
+.foto-principal:hover .foto-ampliar {
+    background: #54cc82;
+    border-color: #54cc82;
+    color: #04110a;
+}
+
+/* Flechas */
+.flecha-foto {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(8,13,10,.55);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+}
+
+.flecha-prev { left: 18px; }
+.flecha-next { right: 18px; }
+
+.foto-principal:hover .flecha-foto { opacity: 1; }
+
+.flecha-foto:hover {
+    background: #54cc82;
+    border-color: #54cc82;
+    color: #04110a;
+    transform: scale(1.08);
+}
+
+/* ---------- Miniaturas ---------- */
 .miniaturas-fotos {
+    position: relative;
     display: flex;
     gap: 14px;
-    margin-top: 18px;
+    margin-top: 20px;
+    padding: 6px 4px 10px;
     overflow-x: auto;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
-.miniaturas-fotos::-webkit-scrollbar {
-    display: none;
-}
+.miniaturas-fotos::-webkit-scrollbar { display: none; }
 
 .miniatura-foto {
     position: relative;
-    flex: 0 0 145px;
-    height: 90px;
+    flex: 0 0 150px;
+    height: 94px;
     padding: 0;
     overflow: hidden;
     border: 3px solid transparent;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #080d0a;
     cursor: pointer;
-    opacity: .65;
+    opacity: .55;
     transition: .3s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .miniatura-foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .miniatura-foto:hover,
@@ -1299,8 +1379,113 @@ select {
     opacity: 1;
     border-color: #54cc82;
     transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(44,190,98,.25);
+    box-shadow: 0 8px 24px rgba(44,190,98,.3);
 }
+
+/* =====================================================
+                 VISOR AMPLIADO (LIGHTBOX)
+===================================================== */
+.visor-galeria {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 70px 90px;
+    background: rgba(3,6,4,.96);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s;
+    touch-action: pan-y;
+}
+
+.visor-galeria.abierto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.visor-galeria img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.7);
+    transform: scale(.96);
+    transition: transform .35s ease, opacity .25s ease;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.visor-galeria.abierto img { transform: scale(1); }
+
+.visor-pie {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 24px 26px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
+    pointer-events: none;
+}
+
+.visor-pie small {
+    display: block;
+    color: #72d99a;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.visor-pie strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 17px;
+}
+
+.visor-pie span {
+    display: block;
+    margin-top: 4px;
+    color: #9fb0a6;
+    font-size: 12px;
+}
+
+.visor-btn {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .25s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.visor-btn:hover {
+    background: #54cc82;
+    border-color: #54cc82;
+    color: #04110a;
+}
+
+.visor-cerrar { top: 18px; right: 20px; }
+.visor-prev   { left: 18px;  top: 50%; margin-top: -25px; }
+.visor-next   { right: 18px; top: 50%; margin-top: -25px; }
+
+body.visor-abierto { overflow: hidden; }
+
+
 
 /* =====================================================
                  GALERÍA DE VIDEOS
@@ -2845,6 +3030,60 @@ select {
     .foto-principal {
         box-shadow: 0 6px 18px rgba(0,0,0,.25);
     }
+}
+
+/* =====================================================
+                 RESPONSIVE galeria de fotos
+===================================================== */
+@media (max-width: 900px) {
+    .foto-principal { height: 440px; }
+    .superposicion-foto h3 { font-size: 24px; }
+}
+
+@media (max-width: 600px) {
+    .seccion-multimedia { padding: 60px 5%; }
+
+    .foto-principal {
+        height: 320px;
+        border-radius: 16px;
+    }
+
+    .superposicion-foto { padding: 70px 20px 20px; }
+    .superposicion-foto h3 { font-size: 19px; }
+    .superposicion-foto p { display: none; }
+
+    .foto-contador,
+    .foto-ampliar { top: 12px; padding: 6px 11px; font-size: 11px; }
+    .foto-contador { left: 12px; }
+    .foto-ampliar  { right: 12px; }
+    .foto-ampliar em { display: none; }
+
+    /* en celular las flechas siempre visibles */
+    .flecha-foto { width: 40px; height: 40px; margin-top: -20px; opacity: 1; }
+    .flecha-prev { left: 10px; }
+    .flecha-next { right: 10px; }
+
+    .miniaturas-fotos { gap: 10px; }
+    .miniatura-foto { flex: 0 0 100px; height: 66px; border-radius: 9px; border-width: 2px; }
+
+    .visor-galeria { padding: 64px 10px 100px; }
+    .visor-prev, .visor-next { top: auto; bottom: 22px; margin-top: 0; width: 44px; height: 44px; }
+    .visor-prev { left: 16px; }
+    .visor-next { right: 16px; }
+    .visor-cerrar { top: 12px; right: 12px; }
+}
+
+/* =====================================================
+   CELULAR / TÁCTIL: sin flechas, se desliza con el dedo
+===================================================== */
+@media (max-width: 600px), (hover: none) {
+    .flecha-foto,
+    .visor-prev,
+    .visor-next {
+        display: none !important;
+    }
+
+    .visor-galeria { padding: 64px 10px 90px; }
 }
 
 

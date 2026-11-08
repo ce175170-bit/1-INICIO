@@ -1,114 +1,39 @@
 
+
 window.FOTOS = [
-    
+
+    /* ---------- DEMOSTRACIÓN DE BANDAS ---------- */
     {
         imagen: "Galeria fotos/banda1.jpg",
         titulo: "Demostracion de bandas",
         categoria: "ANIVERSARIO DEL MUNICIPIO DE BETANZOS 2026",
         descripcion: "Nuestro colegio J.F.B. fue parte de la demostracion de bandas"
     },
-    {
-        imagen: "Galeria fotos/banda2.jpg",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/banda3.jpg",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/banda4.jpg",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/banda5.jpg",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/banda6.jpg",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/banda7.jpg",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    
+    { imagen: "Galeria fotos/banda2.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/banda3.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/banda4.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/banda5.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/banda6.jpg", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/banda7.jpg", titulo: "", categoria: "", descripcion: "" },
 
-
+    /* ---------- DESFILE 6 DE AGOSTO ---------- */
     {
         imagen: "Galeria fotos/ago.webp",
         titulo: "Desfile, 6 de agosto de 2026",
         categoria: "ANIVERSARIO DE BOLIVIA",
         descripcion: "Actividades y experiencias compartidas por nuestra comunidad educativa."
     },
-    {
-        imagen: "Galeria fotos/ago1.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago2.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago3.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago4.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago5.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago6.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago7.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago8.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    },
-    {
-        imagen: "Galeria fotos/ago9.webp",
-        titulo: "",
-        categoria: "",
-        descripcion: ""
-    }
+    { imagen: "Galeria fotos/ago1.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago2.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago3.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago4.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago5.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago6.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago7.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago8.webp", titulo: "", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/ago9.webp", titulo: "", categoria: "", descripcion: "" }
+
 ];
-
-
 
 /* ============================================================
    LISTA DE FOTOS  (el ÚNICO archivo que debes editar)
@@ -117,6 +42,8 @@ window.FOTOS = [
      abrir la página.
    - Todas las fotos aparecen como miniaturas abajo (se
      deslizan hacia el lado, caben todas las que quieras).
+   - El texto (titulo/categoria/descripcion) solo aparece en las
+     fotos que lo tengan escrito; las demás salen sin texto.
 
    PARA AGREGAR UNA FOTO:
      copia un bloque { ... } completo y pégalo donde quieras
