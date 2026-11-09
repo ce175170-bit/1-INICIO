@@ -6,11 +6,27 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
-        fecha: "06 de noviembre de 2026",
-        titulo: "Campeonato estudiantil de futsal del nivel secundario en Betanzos",
-        resumen: "En conmemoración de un aniversario más de Betanzos como capital de la provincia Cornelio Saavedra, se lanza la presente convocatoria con el objetivo de promover el deporte en nuestro municipio",
-        imagen: "Noticias/noti11.jpg",
-        enlace: "https://www.facebook.com/share/p/1EmukM4ya2/"
+        fecha: "09 de noviembre de 2026",
+        titulo: "Gran carrera de motociclismo en la ciudad de Betanzos",
+        resumen: "El Gobierno Autónomo Municipal de Betanzos invita a toda la población a disfrutar de una nueva actividad deportiva: ¡la gran competencia de motociclismo!",
+        imagen: "Noticias/noti16.png",
+        enlace: "https://elpotosi.net/local/20261106_senamhi-preve-lluvias-aisladas-en-el-departamento-de-potosi.html"
+    },
+
+    {
+        fecha: "09 de noviembre de 2026",
+        titulo: "Magisterio urbano de Potosí va al paro de 48 horas con protestas",
+        resumen: "Los afiliados a la Federación de Trabajadores en Educación Urbana de Potosí anunciaron que acatarán la paralización de actividades convocada por su confederación para este lunes 9 y martes 10 de noviembre",
+        imagen: "Noticias/noti14.jpg",
+        enlace: "https://elpotosi.net/local/20261109_magisterio-urbano-de-potosi-va-al-paro-de-48-horas-con-protestas.html"
+    },
+
+    {
+        fecha: "09 de noviembre de 2026",
+        titulo: "Aeropuerto de Potosí estrenará pista de 4 kilómetros para vuelo exploratorio de Ecojet",
+        resumen: "Con más de 71 años de historia, el Aeropuerto Internacional Capitán Nicolás Rojas de Potosí estrenará una pista de cuatro kilómetros y, en los próximos días, será escenario del primer vuelo exploratorio de la aerolínea privada Ecojet.",
+        imagen: "Noticias/noti15.jpg",
+        enlace: "https://elpotosi.net/local/20261108_aeropuerto-de-potosi-estrenara-pista-de-4-kilometros-para-vuelo-exploratorio-de-ecojet.html"
     },
 
     {
