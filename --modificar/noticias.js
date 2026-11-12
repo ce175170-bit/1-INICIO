@@ -6,19 +6,28 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
-        fecha: "09 de noviembre de 2026",
-        titulo: "Gran carrera de motociclismo en la ciudad de Betanzos",
-        resumen: "El Gobierno Autónomo Municipal de Betanzos invita a toda la población a disfrutar de una nueva actividad deportiva: ¡la gran competencia de motociclismo!",
-        imagen: "Noticias/noti16.png",
-        enlace: "https://elpotosi.net/local/20261106_senamhi-preve-lluvias-aisladas-en-el-departamento-de-potosi.html"
+        fecha: "11 de noviembre de 2026",
+        titulo: "Cuadrangular de basquetbol",
+        resumen: "Colegio Bohórquez prepara cuadrangular de basquetbol con equipos potosínos. Este fin de semana",
+        imagen: "Noticias/noti18.jpg",
+        enlace: "https://www.facebook.com/share/p/1BpbGp6rsn/"
+    },
+
+
+    {
+        fecha: "11 de noviembre de 2026",
+        titulo: "Pasaje Betanzos Potosí en los rapiditos baja de 18 a 16 Bs",
+        resumen: "Anoche en reunión con dirigentes y autoridades locales, hemos acordado bajar el pasaje de 18 a 16 Bs.",
+        imagen: "Noticias/noti19.jpg",
+        enlace: "https://www.facebook.com/share/p/1F5j9Byuk9/"
     },
 
     {
-        fecha: "09 de noviembre de 2026",
-        titulo: "Magisterio urbano de Potosí va al paro de 48 horas con protestas",
-        resumen: "Los afiliados a la Federación de Trabajadores en Educación Urbana de Potosí anunciaron que acatarán la paralización de actividades convocada por su confederación para este lunes 9 y martes 10 de noviembre",
-        imagen: "Noticias/noti14.jpg",
-        enlace: "https://elpotosi.net/local/20261109_magisterio-urbano-de-potosi-va-al-paro-de-48-horas-con-protestas.html"
+        fecha: "11 de noviembre de 2026",
+        titulo: "GOBIERNO Y MAESTROS RURALES FIRMAN ACUERDO",
+        resumen: "Con la mediación del Defensor del Pueblo, el Ministerio de Educación y la Confederación Nacional de Maestros de Educación Rural de Bolivia",
+        imagen: "Noticias/noti20.jpg",
+        enlace: "https://www.facebook.com/share/p/1FvjUnEbp6/"
     },
 
     {

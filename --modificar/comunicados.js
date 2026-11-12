@@ -6,6 +6,14 @@ window.COMUNICADOS_CONFIG = {
 window.COMUNICADOS = [
 
     {
+        etiqueta: "INVITACION",
+        titulo: "Cuadrangular de basquetbol",
+        fecha: "11 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/comunicado12.png",
+        descripcion: "Se invita especialmente a los estudiantes del Colegio Bohórquez a asistir y brindar su apoyo a nuestro equipo representativo"
+    },   
+
+    {
         etiqueta: "COMUNICADO",
         titulo: "Actividad escolar para el dia lunes",
         fecha: "8 DE NOVIEMBRE DE 2026",
