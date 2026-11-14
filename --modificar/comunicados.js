@@ -8,6 +8,14 @@ window.COMUNICADOS = [
     {
         etiqueta: "INVITACION",
         titulo: "Rol de partidos ",
+        fecha: "14 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/comunicado13.png",
+        descripcion: "¡Hoy también toca apoyar a la selección de básquet de nuestro colegio Juan Francisco Bohórquez! 🏀💚🤍 ¡No falten, vamos con todo! 📣"
+    },   
+
+    {
+        etiqueta: "INVITACION",
+        titulo: "Rol de partidos ",
         fecha: "13 DE NOVIEMBRE DE 2026",
         imagen: "Comunicados/comunicado13.jpeg",
         descripcion: "¡Hoy alentamos a nuestra selección! 🏆💙¡Estudiantes del Colegio Bohórquez, el momento llegó! Hoy todos deben estar presente para apoyar a nuestra selección. Trae tu voz, tu barra y tu orgullo bohorquerista."
