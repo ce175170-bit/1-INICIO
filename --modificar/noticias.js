@@ -6,6 +6,30 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
+        fecha: "16 de noviembre de 2026",
+        titulo: "Operativo de intendencia, decomisa productos vencidos.",
+        resumen: "Tras un trabajo conjunto entre el SEDES Potosí, la Policía Boliviana y la Intendencia Municipal del G.A.M. de Betanzos, se llevó adelante un operativo sorpresa",
+        imagen: "Noticias/noti21.png",
+        enlace: "https://www.facebook.com/share/v/1TQXT1Uyk4/"
+    },
+
+    {
+        fecha: "16 de noviembre de 2026",
+        titulo: "Competencia de automovilismo en Betanzos",
+        resumen: "El rugido de los motores está cada vez más cerca y BETANZOS 2026 se prepara para recibir una de las grandes emociones del automovilismo departamental.",
+        imagen: "Noticias/noti22.jpg",
+        enlace: "https://www.facebook.com/share/p/17ts7jwWf5/"
+    },
+
+    {
+        fecha: "16 de noviembre de 2026",
+        titulo: "Bachilleres acuden a su última semana de clases para procesar sus notas",
+        resumen: "A menos de un mes del cierre de las actividades educativas en el Departamento de Potosí, que en gran parte de los distritos escolares terminarán el 11 de diciembre",
+        imagen: "Noticias/noti23.jpg",
+        enlace: "https://elpotosi.net/local/20261116_bachilleres-acuden-a-su-ultima-semana-de-clases-para-procesar-sus-notas.html"
+    },
+
+    {
         fecha: "11 de noviembre de 2026",
         titulo: "Cuadrangular de basquetbol",
         resumen: "Colegio Bohórquez prepara cuadrangular de basquetbol con equipos potosínos. Este fin de semana",

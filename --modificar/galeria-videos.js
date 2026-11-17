@@ -1,5 +1,21 @@
 
-window.VIDEOS = [ 
+window.VIDEOS = [
+    
+    {
+        src: "Galeria videos/varones.mp4",
+        titulo: "Cuadrangular de varones",
+        categoria: "",
+        descripcion: "Revive la final del cuadrangular de varones",
+        miniatura: "img/varones.png"
+    },
+
+    {
+        src: "Galeria videos/damas.mp4",
+        titulo: "Cuadrangular de damas",
+        categoria: "",
+        descripcion: "Revive la final del cuadrangular de damas",
+        miniatura: "img/damas.png"
+    },
 
     {
         src: "https://youtube.com/shorts/C1sjJBA9c74?si=UgG8WNFss1kn9HOm",
