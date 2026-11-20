@@ -5,6 +5,15 @@ window.COMUNICADOS_CONFIG = {
 
 window.COMUNICADOS = [
 
+     {
+        etiqueta: "COMUNICADO",
+        titulo: "Defensa de proyectos ",
+        fecha: "20 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/comunicado13.png",
+        descripcion: "¡Hoy también toca apoyar a la selección de básquet de nuestro colegio Juan Francisco Bohórquez! 🏀💚🤍 ¡No falten, vamos con todo! 📣"
+    },   
+
+
     {
         etiqueta: "INVITACION",
         titulo: "Rol de partidos ",
