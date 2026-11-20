@@ -6,19 +6,27 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
-        fecha: "16 de noviembre de 2026",
-        titulo: "Operativo de intendencia, decomisa productos vencidos.",
-        resumen: "Tras un trabajo conjunto entre el SEDES Potosí, la Policía Boliviana y la Intendencia Municipal del G.A.M. de Betanzos, se llevó adelante un operativo sorpresa",
-        imagen: "Noticias/noti21.png",
-        enlace: "https://www.facebook.com/share/v/1TQXT1Uyk4/"
+        fecha: "20 de noviembre de 2026",
+        titulo: "Los Juegos Estudiantiles se realizará del 30 de noviembre al 4 de diciembre.",
+        resumen: "Gracias a la firme voluntad y el compromiso del Gobernador, Abg. René Joaquino Cabrera, la Gobernación de Potosí garantiza la realización de los Juegos Estudiantiles",
+        imagen: "Noticias/noti24.jpg",
+        enlace: "https://www.facebook.com/share/p/1AAHEirxYn/"
     },
 
     {
-        fecha: "16 de noviembre de 2026",
-        titulo: "Competencia de automovilismo en Betanzos",
-        resumen: "El rugido de los motores está cada vez más cerca y BETANZOS 2026 se prepara para recibir una de las grandes emociones del automovilismo departamental.",
-        imagen: "Noticias/noti22.jpg",
-        enlace: "https://www.facebook.com/share/p/17ts7jwWf5/"
+        fecha: "20 de noviembre de 2026",
+        titulo: "Inicia preinscripción en unidades educativas de alta demanda en Potosí",
+        resumen: "La lista completa de unidades educativas está en la web: https://altademanda.sie.gob.bo/ Los formularios serán recibidos hasta el 18 de diciembre.",
+        imagen: "Noticias/noti25.jpg",
+        enlace: "https://elpotosi.net/local/20261120_inicia-preinscripcion-en-unidades-educativas-de-alta-demanda-en-potosi.html"
+    },
+
+    {
+        fecha: "20 de noviembre de 2026",
+        titulo: "Maestros urbanos marchan y alistan nuevas movilizaciones",
+        resumen: "Los afiliados a la Federación de Trabajadores en Educación Urbana de Potosí salieron a las calles en una marcha de protesta para reiterar su rechazo a lo que denominan descentralización de la educación.",
+        imagen: "Noticias/noti26.jpg",
+        enlace: "https://elpotosi.net/local/20261120_maestros-urbanos-marchan-y-alistan-nuevas-movilizaciones.html"
     },
 
     {
