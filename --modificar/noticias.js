@@ -6,27 +6,27 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
-        fecha: "20 de noviembre de 2026",
-        titulo: "Los Juegos Estudiantiles se realizará del 30 de noviembre al 4 de diciembre.",
-        resumen: "Gracias a la firme voluntad y el compromiso del Gobernador, Abg. René Joaquino Cabrera, la Gobernación de Potosí garantiza la realización de los Juegos Estudiantiles",
-        imagen: "Noticias/noti24.jpg",
-        enlace: "https://www.facebook.com/share/p/1AAHEirxYn/"
+        fecha: "22 de noviembre de 2026",
+        titulo: "BONO PEPE II SE PAGARÁ DESDE EL LUNES 23 EN TODO EL PAÍS.",
+        resumen: "El Bono Pepe II, Programa Extraordinario de Protección y Equidad, se pagará desde el próximo lunes 23 de noviembre a los nacidos en el mes de noviembre",
+        imagen: "Noticias/noti27.jpg",
+        enlace: "https://www.facebook.com/share/p/1AHg5UkvvP/"
     },
 
     {
-        fecha: "20 de noviembre de 2026",
-        titulo: "Inicia preinscripción en unidades educativas de alta demanda en Potosí",
-        resumen: "La lista completa de unidades educativas está en la web: https://altademanda.sie.gob.bo/ Los formularios serán recibidos hasta el 18 de diciembre.",
-        imagen: "Noticias/noti25.jpg",
-        enlace: "https://elpotosi.net/local/20261120_inicia-preinscripcion-en-unidades-educativas-de-alta-demanda-en-potosi.html"
+        fecha: "22 de noviembre de 2026",
+        titulo: "Córdova se corona campeón de la Liga Nacional de Futsal",
+        resumen: "Con dos goles del betanceño Chinche, José Fernando Terán, El Club Córdova, gritó Campeón del fútbol de salón boliviano",
+        imagen: "Noticias/noti28.jpg",
+        enlace: "https://www.facebook.com/share/p/1HGLT98SDE/"
     },
 
     {
-        fecha: "20 de noviembre de 2026",
-        titulo: "Maestros urbanos marchan y alistan nuevas movilizaciones",
-        resumen: "Los afiliados a la Federación de Trabajadores en Educación Urbana de Potosí salieron a las calles en una marcha de protesta para reiterar su rechazo a lo que denominan descentralización de la educación.",
-        imagen: "Noticias/noti26.jpg",
-        enlace: "https://elpotosi.net/local/20261120_maestros-urbanos-marchan-y-alistan-nuevas-movilizaciones.html"
+        fecha: "22 de noviembre de 2026",
+        titulo: "¡Debut soñado en el Mundial de Talla Baja!",
+        resumen: "👏🏻 Muchas felicidades a nuestro estudiante Abdon Vedia de la Unidad Educativa Alfredo Miranda Torres de Millares, perteneciente al Municipio de Betanzos",
+        imagen: "Noticias/noti29.jpg",
+        enlace: "https://www.facebook.com/share/p/1EyJ2SqCXc/"
     },
 
     {
@@ -68,48 +68,7 @@ window.NOTICIAS = [
         resumen: "Con más de 71 años de historia, el Aeropuerto Internacional Capitán Nicolás Rojas de Potosí estrenará una pista de cuatro kilómetros y, en los próximos días, será escenario del primer vuelo exploratorio de la aerolínea privada Ecojet.",
         imagen: "Noticias/noti15.jpg",
         enlace: "https://elpotosi.net/local/20261108_aeropuerto-de-potosi-estrenara-pista-de-4-kilometros-para-vuelo-exploratorio-de-ecojet.html"
-    },
-
-    {
-        fecha: "06 de noviembre de 2026",
-        titulo: "Senamhi prevé lluvias aisladas en el Departamento de Potosí",
-        resumen: "Pese a que los efectos del fenómeno “El Niño” comenzaron a golpear de manera contundente a las cuatro regiones del Departamento de Potosí, que soportan una drástica disminución de precipitaciones pluviales",
-        imagen: "Noticias/noti12.jpg",
-        enlace: "https://elpotosi.net/local/20261106_senamhi-preve-lluvias-aisladas-en-el-departamento-de-potosi.html"
-    },
-
-    {
-        fecha: "06 de noviembre de 2026",
-        titulo: "Magisterio urbano anuncia más piquetes y protestas",
-        resumen: "La Federación de Trabajadores en Educación Urbana de Potosí mantiene sus medidas de presión. Este viernes tiene prevista la crucifixión de educadores en demanda de que las autoridades gubernamentales escuchen su demanda.",
-        imagen: "Noticias/noti13.jpg",
-        enlace: "https://elpotosi.net/local/20261106_magisterio-urbano-anuncia-mas-piquetes-y-protestas.html"
-    },
-
-
-    {
-        fecha: "03 de noviembre de 2026",
-        titulo: "Precios actuales de la canasta familiar en Betanzos",
-        resumen: "Los costos de la canasta familiar y las tarifas de transporte fueron socializados y acordados con representantes de los sindicatos y organizaciones sociales, quienes participaron en diversas reuniones junto a las autoridades municipales, el Comité Cívico, la FEJUVE y los presidentes de barrio.",
-        imagen: "Noticias/noti8.jpg",
-        enlace: "https://www.facebook.com/share/p/1CFKapVf5f/"
-    },
-
-    {
-        fecha: "03 de noviembre de 2026",
-        titulo: "Alta demanda: ya hay cronograma para la preinscripción 2027",
-        resumen: "Se acerca el cierre del año escolar y desde el Ministerio de Educación ya se ha establecido un cronograma para la preinscripción en unidades educativas de alta demanda que inicia la próxima semana con el registro de las escuelas y terminará en enero de 2027.",
-        imagen: "Noticias/noti9.jpg",
-        enlace: "https://elpotosi.net/local/20261103_alta-demanda-ya-hay-cronograma-para-la-preinscripcion-2027.html"
-    },
-
-     {
-        fecha: "03 de noviembre de 2026",
-        titulo: "Fallece el cantautor potosino Luis Rico",
-        resumen: "Fue uno de los cantautores y compositores de canción social y de protesta más influyentes de Bolivia. Nació el 15 de mayo de 1945 en Tupiza, Potosí, y dedicó más de 50 años a retratar la historia",
-        imagen: "Noticias/noti10.jpg",
-        enlace: "https://correodelsur.com/cultura/20261103/fallece-el-cantautor-luis-rico.html"
-    },     
+    },        
 
     {
         fecha: "26 de octubre de 2026",
