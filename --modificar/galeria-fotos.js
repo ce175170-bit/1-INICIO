@@ -3,6 +3,18 @@
 window.FOTOS = [
 
     /* ---------- DEMOSTRACIÓN DE BANDAS ---------- */
+
+    {
+        imagen: "Galeria fotos/promo.png",
+        titulo: "Promocion 2026",
+        categoria: "",
+        descripcion: ""
+    },
+    { imagen: "Galeria fotos/sextoA.jpg", titulo: "6° A", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/sextoB.jpg", titulo: "6° B", categoria: "", descripcion: "" },
+    { imagen: "Galeria fotos/sextoC.jpg", titulo: "6° C", categoria: "", descripcion: "" },
+    
+
     {
         imagen: "Galeria fotos/des-porta.jpg",
         titulo: "Desfile Civico en honor al aniversario del municipio de Betanzos",

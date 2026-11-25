@@ -6,6 +6,14 @@ window.COMUNICADOS_CONFIG = {
 window.COMUNICADOS = [
 
     {
+        etiqueta: "RECONOCIMIENTO",
+        titulo: "Equipo de basquet del colegio J.F.B. ",
+        fecha: "24 DE NOVIEMBRE DE 2026",
+        imagen: "Comunicados/recuerdo.jpeg",
+        descripcion: "Jugadores formados desde los 11 años, hasta el ultimo año de colegio"
+    },
+
+    {
         etiqueta: "INVITACION",
         titulo: "Participar en la defensa de proyectos BTH ",
         fecha: "20 DE NOVIEMBRE DE 2026",

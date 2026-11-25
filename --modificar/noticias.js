@@ -6,27 +6,27 @@ window.NOTICIAS_CONFIG = {
 window.NOTICIAS = [
 
     {
-        fecha: "22 de noviembre de 2026",
-        titulo: "BONO PEPE II SE PAGARÁ DESDE EL LUNES 23 EN TODO EL PAÍS.",
-        resumen: "El Bono Pepe II, Programa Extraordinario de Protección y Equidad, se pagará desde el próximo lunes 23 de noviembre a los nacidos en el mes de noviembre",
-        imagen: "Noticias/noti27.jpg",
-        enlace: "https://www.facebook.com/share/p/1AHg5UkvvP/"
+        fecha: "24 de noviembre de 2026",
+        titulo: "GANADORAS DEL CONCURSO DE TIKTOK «CRECIENDO SEGUROS Y FELICES»",
+        resumen: "El Gobierno Autónomo Municipal de Betanzos felicita a las dos ganadoras de este concurso, que tuvo como objetivo promover la creatividad y expresión de niñas",
+        imagen: "Noticias/noti30.png",
+        enlace: "https://www.facebook.com/share/v/19kSBSeidr/"
     },
 
     {
-        fecha: "22 de noviembre de 2026",
-        titulo: "Córdova se corona campeón de la Liga Nacional de Futsal",
-        resumen: "Con dos goles del betanceño Chinche, José Fernando Terán, El Club Córdova, gritó Campeón del fútbol de salón boliviano",
-        imagen: "Noticias/noti28.jpg",
-        enlace: "https://www.facebook.com/share/p/1HGLT98SDE/"
+        fecha: "24 de noviembre de 2026",
+        titulo: "Choferes suben ilegalmente tarifas tras el alza del diésel",
+        resumen: "De manera automática, e ilegal, varios choferes del transporte público subieron las tarifas de micros y minibuses poniendo como excusa la reciente elevación del precio del diésel.",
+        imagen: "Noticias/noti31.png",
+        enlace: "https://elpotosi.net/local/20261124_choferes-suben-ilegalmente-tarifas-tras-el-alza-del-diesel.html"
     },
 
     {
-        fecha: "22 de noviembre de 2026",
-        titulo: "¡Debut soñado en el Mundial de Talla Baja!",
-        resumen: "👏🏻 Muchas felicidades a nuestro estudiante Abdon Vedia de la Unidad Educativa Alfredo Miranda Torres de Millares, perteneciente al Municipio de Betanzos",
-        imagen: "Noticias/noti29.jpg",
-        enlace: "https://www.facebook.com/share/p/1EyJ2SqCXc/"
+        fecha: "24 de noviembre de 2026",
+        titulo: "SELECCIÓN DE TALLA BAJA DE FUTSAL  SIN PASAJES PARA VOLVER A BOLIVIA",
+        resumen: "La Selección Boliviana de Fútbol de Talla Baja vive dos realidades  en el Mundial de  Marruecos. Dentro de la cancha, es protagonista y líder invicto",
+        imagen: "Noticias/noti32.jpg",
+        enlace: "https://www.facebook.com/share/p/1CXEy97LM6/"
     },
 
     {
